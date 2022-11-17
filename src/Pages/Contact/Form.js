@@ -7,70 +7,70 @@ import TextField from '@mui/material/TextField';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
 </style>
 
-const Contact = () => {
+const Form = () => {
   const classes = useStyles();
-
   return (
-    <div className={classes.root}>
-      <h2 className={classes.title}>Contact</h2>
         <FormControl >
           <form onSubmit={(e)=>console.log('send')}>
             <div className={classes.form}>
               <div className={classes.input}>
-                <TextField required id="outlined-helperText" label="First Name" size="small"/>
+                <TextField required id="outlined-helperText" label="First Name" size="small" style={{width:"29vw"}}/>
               </div>
               <div className={classes.input}>
-                <TextField required id="outlined-helperText" label="Last Name" size="small"/>
+                <TextField required id="outlined-helperText" label="Last Name" size="small" style={{width:"29vw"}}/>
               </div>
               <div className={classes.input}>
-                <TextField required id="outlined-helperText" label="Number" size="small"/>
+                <TextField required id="outlined-helperText" label="Email" size="small" style={{width:"29vw"}}/>
               </div>
               <div className={classes.input}>
-                <TextField required id="outlined-helperText" label="Comapny Name" size="small"/>
+                <TextField id="outlined-helperText" label="Number" size="small" style={{width:"29vw"}}/>
               </div>
               <div className={classes.input}>
-                <TextField required id="outlined-helperText" label="First Name" size="small"/>   
+                <TextField id="outlined-helperText" label="Company" size="small" style={{width:"29vw"}}/>   
               </div>
               <div className={classes.input}>
-                <TextField  id="outlined-multiline-static" label="Massage" multiline rows={4}/>              
+                <TextField  id="outlined-multiline-static" label="Massage" multiline rows={4} style={{width:"29vw"}}/>              
               </div>
               <button type="submit" className={classes.sendbtn}>Submit</button>
             </div>
           </form>
         </FormControl>
-      </div>
 
   )
 }
 
-export default Contact
+export default Form
 
 const useStyles = makeStyles({
-  root:{
-    height: 'auto',
-    padding:'50px'
-  },
-  title:{
-    fontFamily:'Roboto, sans-serif',
-    fontWeight:600,
-    fontSize:40
-  },
   form:{
     display: 'flex',
-    width:'60%',
+    width:'60vw',
+    height:'50vh',
+    alignContent: 'flex-start',
     flexDirection:'row',
     flexWrap: 'wrap',
     justifyContent: 'space-evenly'
   },
   input:{
-    margin:'5px'
+    display:'inline-block',
+    marginRight:'3px',
+    marginTop:'15px'
   },
   sendbtn:{
-    border:'2px solid #04b4e0',
     width:'200px',
     height:'50px',
-    borderRadius: '30px',
     marginTop: '30px',
     backgroundColor: 'transparent',
+    border: '1px solid white',
+    borderRadius: '30px',
+    padding:'15px 20px',
+    fontSize:'18px',
+    boxShadow:'0 10px 10px -8px rgb(0 0 0 / 22%)',
+    fontFamily:'Poppins, sans-serif',
+    fontWeight:300,
+        "&:hover": {
+            backgroundColor: 'rgb(7, 177, 77, 0.42)',
+            color:'#fff'
+          }
   }
 })

@@ -8,7 +8,7 @@ const useStyles = makeStyles({
   root:{
     position: 'relative',
     display: 'flex',
-    overflowX:'hidden',
+    overflow:'hidden',
   },
   navbar: {
         position: 'sticky',

@@ -18,9 +18,9 @@ const classes = useStyles();
             <h2 className={classes.name}>Liran Uziyahu</h2>
             <h4 className={classes.role}>Web Developer</h4>
             <div className={classes.buttons}>
-                <a><LinkedInIcon fontSize='large'/></a>
-                <a><GitHubIcon fontSize='large'/></a>
-                <a><EmailIcon fontSize='large'/></a>
+            <LinkedInIcon fontSize='large' onClick={() => window.open('https://www.linkedin.com/in/liran-uziyahu/')}/>
+            <GitHubIcon fontSize='large' onClick={() => window.open('https://www.linkedin.com/in/liran-uziyahu/')}/> 
+            <EmailIcon fontSize='large' onClick={() => window.open('mailto:Liranuzistud@gmail.com')}/>
             </div>
         </div>
         <button className={classes.resume}>Download CV</button>

@@ -14,18 +14,24 @@ const NavBar = () => {
 
   return (
     <div className={classes.root}>
-        <div className={classes.button}>
-                <Link className={classes.icons} to='/home'><RoofingIcon fontSize='large'/></Link>
+        <Link to='/home' style={{textDecoration: 'none'}}>
+            <div className={classes.button}>
+                <RoofingIcon className={classes.icons} fontSize='large'/>
                 <span className={classes.spans}>Home</span>
-        </div>
-        <div className={classes.button}>
-                <Link className={classes.icons} to='/about'><PersonOutlineIcon fontSize='large'/></Link>
+            </div>
+        </Link>
+        <Link to='/about' style={{textDecoration: 'none'}}>
+            <div className={classes.button}>
+                <PersonOutlineIcon className={classes.icons} fontSize='large'/>
                 <span className={classes.spans}>About</span>
-        </div>
-        <div className={classes.button}>
-                <Link className={classes.icons} to='/Contact'><MailOutlineIcon fontSize='large'/></Link>
+            </div>
+        </Link>
+        <Link to='/Contact' style={{textDecoration: 'none'}}>
+            <div className={classes.button}>
+                <MailOutlineIcon className={classes.icons} fontSize='large'/>
                 <span className={classes.spans}>Contact</span>
-        </div>
+            </div>
+        </Link>
     </div>
   )
 }
@@ -41,6 +47,7 @@ const useStyles = makeStyles({
         flexWrap: 'nowrap',
         justifyContent: 'center',
         alignItems: 'stretch',
+
     },
     button:{
         display:'flex',
@@ -50,7 +57,7 @@ const useStyles = makeStyles({
         border: '1px solid #f5f5f5',
         padding: '15px 0',
         width: '100%',
-        height:'10%'
+        height:'10%',
     },
     icons:{
         color:'#d2d3d4',
@@ -59,6 +66,7 @@ const useStyles = makeStyles({
         fontFamily:'Roboto, sans-serif',
         padding:'0px 5px',
         marginTop:'5px',
-        fontWeight:300
+        fontWeight:300,
+        color:'black',
     }
   });
