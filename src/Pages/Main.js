@@ -1,7 +1,7 @@
 import React from 'react'
 import {Outlet ,Link} from 'react-router-dom'
-import Navbar from './Navbar'
-import Profile from './Profile'
+import Navbar from './Navbar/Navbar'
+import Profile from './Profile/Profile'
 import { makeStyles } from '@material-ui/core/styles';
 
 const Main = () => {

@@ -4,9 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import RoofingIcon from '@mui/icons-material/Roofing';
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-</style>
+import AssignmentIndTwoToneIcon from '@mui/icons-material/AssignmentIndTwoTone';
+import '../../CSS/fonts.css';
 
 
 const NavBar = () => {
@@ -21,6 +20,10 @@ const NavBar = () => {
         <Link className={classes.button} to='/about' style={{textDecoration: 'none'}}>
                 <PersonOutlineIcon className={classes.icons} fontSize='large'/>
                 <span className={classes.spans}>About</span>
+        </Link>
+        <Link className={classes.button} to='/Resume' style={{textDecoration: 'none'}}>
+                <AssignmentIndTwoToneIcon className={classes.icons} fontSize='large'/>
+                <span className={classes.spans}>Resume</span>
         </Link>
         <Link className={classes.button} to='/Contact' style={{textDecoration: 'none'}}>
                 <MailOutlineIcon className={classes.icons} fontSize='large'/>
@@ -57,10 +60,10 @@ const useStyles = makeStyles({
         color:'#d2d3d4',
     },
     spans:{
-        fontFamily:'Roboto, sans-serif',
+        fontFamily:'Poppins, sans-serif',
         padding:'0px 5px',
         marginTop:'5px',
-        fontWeight:300,
+        fontWeight:500,
         color:'black',
     }
   });

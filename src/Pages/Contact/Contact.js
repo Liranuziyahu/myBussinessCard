@@ -8,7 +8,7 @@ const Contact = () => {
 
   return (
     <div className={classes.root}>
-        <h2 className={classes.title}>Contact</h2>
+        <div className={classes.title}>Contact</div>
         <div className={classes.groupSection}>
           <Form/>
           <Details/>
@@ -29,10 +29,12 @@ root:{
   title:{
     fontFamily:'Roboto, sans-serif',
     fontWeight:600,
-    fontSize:40
+    fontSize:40,
+    marginBottom:15
   },
   groupSection:{
     display:'flex',
     width: '100%',
+    height:'79%'
   }
 })

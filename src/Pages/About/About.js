@@ -4,7 +4,7 @@ import WebIcon from '@mui/icons-material/Web';
 import WysiwygIcon from '@mui/icons-material/Wysiwyg';
 import StorageIcon from '@mui/icons-material/Storage';
 import CloudSyncIcon from '@mui/icons-material/CloudSync';
-import '../CSS/fonts.css'
+import '../../CSS/fonts.css'
 
 
 const About = () => {
