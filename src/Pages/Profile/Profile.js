@@ -4,8 +4,8 @@ import emoji from '../../imgs/emoji.jpg';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
-import {Link} from 'react-router-dom'
 import IconButton from '@mui/material/IconButton';
+import CvResume from './../../files/Liran Uziyahu Developer.pdf'
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
@@ -32,7 +32,7 @@ const classes = useStyles();
             </IconButton>
             </div>
         </div>
-        <Link className={classes.resume} to="/files/Liran_Uziyahu_Developer.pdf" target="_blank" download>Download CV</Link>
+        <a className={classes.resume} href={CvResume} download="Liran Uziyahu Developer">Download CV</a>
     </div>
   )
 }
@@ -98,6 +98,5 @@ const useStyles = makeStyles({
                 backgroundColor: '#fff',
                 color:'#04b4e0'
               }
-    
     }
   });

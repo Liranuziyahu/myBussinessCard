@@ -17,10 +17,10 @@ const Form = () => {
                   <TextField required id="outlined-helperText" label="Last Name" size="small" style={{width:"29vw"}}/>
                 </div>
                 <div className={classes.input}>
-                  <TextField required id="outlined-helperText" label="Email" size="small" style={{width:"29vw"}}/>
+                  <TextField required id="outlined-helperText" label="Email" type="email" size="small" style={{width:"29vw"}}/>
                 </div>
                 <div className={classes.input}>
-                  <TextField id="outlined-helperText" label="Number" size="small" style={{width:"29vw"}}/>
+                  <TextField required type="tel" id="outlined-helperText" label="Number" inputProps={{ pattern: "[0-9]{7,15}"}} size="small" style={{width:"29vw"}} placeholder="For Example : 0503649949"/>
                 </div>
                 <div className={classes.input}>
                   <TextField id="outlined-helperText" label="Company" size="small" style={{width:"29vw"}}/>   

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Outlet ,Link} from 'react-router-dom'
+import {Outlet} from 'react-router-dom'
 import Navbar from './Navbar/Navbar'
 import Profile from './Profile/Profile'
 import { makeStyles } from '@material-ui/core/styles';
@@ -45,6 +45,8 @@ const useStyles = makeStyles({
       top:'0',
       left:'40vw',
       width: '60vw',
+      minHeight: '100vh',
       height: '100vh',
+
     }
   });

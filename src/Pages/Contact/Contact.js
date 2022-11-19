@@ -35,6 +35,7 @@ root:{
   groupSection:{
     display:'flex',
     width: '100%',
-    height:'79%'
+    minHeight: '79%',
+    marginBottom:30
   }
 })

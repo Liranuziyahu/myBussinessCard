@@ -24,7 +24,7 @@ const Details = () => {
         <Paper elevation={3} className={classes.paper} >
             <div className={classes.group}>
                 <CallIcon fontSize='large'/>
-                <h4>+972-50-364-9949</h4>
+                <h4>050-364-9949</h4>
             </div>
         </Paper>
         <Paper className={classes.paper} elevation={3} >
