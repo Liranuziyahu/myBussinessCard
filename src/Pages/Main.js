@@ -27,14 +27,14 @@ const useStyles = makeStyles({
         top:'0',
         left:'0',
         bottom:'0',
-        width: '6vw',
+        width: '10vw',
         height: '100vh',
     },
     profile:{
         position: 'sticky',
         display:'inline-block',
         top:'0',
-        left:'6vw',
+        left:'10vw',
         bottom:'0',
         width: '30vw',
         height: '100vh',
@@ -43,8 +43,8 @@ const useStyles = makeStyles({
     main:{
       position: 'absolute',
       top:'0',
-      left:'36vw',
-      width: '64vw',
+      left:'40vw',
+      width: '60vw',
       height: '100vh',
     }
   });

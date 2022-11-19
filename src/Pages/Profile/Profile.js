@@ -21,14 +21,14 @@ const classes = useStyles();
             <h2 className={classes.name}>Liran Uziyahu</h2>
             <h4 className={classes.role}>Web Developer</h4>
             <div className={classes.buttons}>
-            <IconButton style={{color:'white'}}>
-                <LinkedInIcon fontSize='large' onClick={() => window.open('https://www.linkedin.com/in/liran-uziyahu/')}/>
+            <IconButton style={{color:'white'}} onClick={() => window.open('https://www.linkedin.com/in/liran-uziyahu/')}>
+                <LinkedInIcon fontSize='large'/>
             </IconButton>
-            <IconButton style={{color:'white'}}>
-                <GitHubIcon fontSize='large' onClick={() => window.open('https://github.com/Liranuziyahu')}/> 
+            <IconButton style={{color:'white'}} onClick={() => window.open('https://github.com/Liranuziyahu')}>
+                <GitHubIcon fontSize='large'/> 
             </IconButton>
-            <IconButton style={{color:'white'}}>
-                <EmailIcon fontSize='large' onClick={() => window.open('mailto:Liranuzistud@gmail.com')}/>
+            <IconButton style={{color:'white'}} onClick={() => window.open('mailto:Liranuzistud@gmail.com')}>
+                <EmailIcon fontSize='large'/>
             </IconButton>
             </div>
         </div>
