@@ -32,7 +32,7 @@ const classes = useStyles();
             </IconButton>
             </div>
         </div>
-        <Link className={classes.resume} to="/files/Liran Uziyahu Developer.pdf" target="_blank" download>Download CV</Link>
+        <Link className={classes.resume} to="/files/Liran_Uziyahu_Developer.pdf" target="_blank" download>Download CV</Link>
     </div>
   )
 }
