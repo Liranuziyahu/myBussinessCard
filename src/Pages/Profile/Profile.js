@@ -5,6 +5,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import {Link} from 'react-router-dom'
+import IconButton from '@mui/material/IconButton';
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
@@ -20,9 +21,15 @@ const classes = useStyles();
             <h2 className={classes.name}>Liran Uziyahu</h2>
             <h4 className={classes.role}>Web Developer</h4>
             <div className={classes.buttons}>
-            <LinkedInIcon fontSize='large' onClick={() => window.open('https://www.linkedin.com/in/liran-uziyahu/')}/>
-            <GitHubIcon fontSize='large' onClick={() => window.open('https://github.com/Liranuziyahu')}/> 
-            <EmailIcon fontSize='large' onClick={() => window.open('mailto:Liranuzistud@gmail.com')}/>
+            <IconButton style={{color:'white'}}>
+                <LinkedInIcon fontSize='large' onClick={() => window.open('https://www.linkedin.com/in/liran-uziyahu/')}/>
+            </IconButton>
+            <IconButton style={{color:'white'}}>
+                <GitHubIcon fontSize='large' onClick={() => window.open('https://github.com/Liranuziyahu')}/> 
+            </IconButton>
+            <IconButton style={{color:'white'}}>
+                <EmailIcon fontSize='large' onClick={() => window.open('mailto:Liranuzistud@gmail.com')}/>
+            </IconButton>
             </div>
         </div>
         <Link className={classes.resume} to="/files/Liran Uziyahu Developer.pdf" target="_blank" download>Download CV</Link>

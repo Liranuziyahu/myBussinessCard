@@ -1,4 +1,4 @@
-import React from 'react'
+import React , {useRef} from 'react'
 import {Link} from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
@@ -10,24 +10,47 @@ import '../../CSS/fonts.css';
 
 const NavBar = () => {
     const classes = useStyles();
+    const LinksControl = useRef(null);
+
+    const focuseLink = (index)=>{
+        let linksControl = Object.values(LinksControl.current.children)
+        linksControl.map((link,i) => {
+          if(i == index)
+           {
+                link.style.backgroundColor='rgba(22, 32, 10, 0.07)';
+                link.children[1].style.fontWeight='600'
+                link.children[0].style.color='#04b4e0'
+           }
+          else
+            {
+                link.style.backgroundColor = ''
+                link.children[0].style.color=''
+                link.children[1].style.fontWeight='500'
+            }
+        })
+     }
 
   return (
-    <div className={classes.root}>
-        <Link className={classes.button} to='/home' style={{textDecoration: 'none'}}>
+    <div className={classes.root} ref={LinksControl}>
+        <Link className={classes.button} to='/' style={{textDecoration: 'none'}} onClick={() => focuseLink(0)}>
                 <RoofingIcon className={classes.icons} fontSize='large'/>
                 <span className={classes.spans}>Home</span>
         </Link>
-        <Link className={classes.button} to='/about' style={{textDecoration: 'none'}}>
+        <Link className={classes.button} to='/about' style={{textDecoration: 'none'}} onClick={() => focuseLink(1)}>
                 <PersonOutlineIcon className={classes.icons} fontSize='large'/>
                 <span className={classes.spans}>About</span>
         </Link>
-        <Link className={classes.button} to='/Resume' style={{textDecoration: 'none'}}>
+        <Link className={classes.button} to='/Resume' style={{textDecoration: 'none'}} onClick={() => focuseLink(2)}>
                 <AssignmentIndTwoToneIcon className={classes.icons} fontSize='large'/>
                 <span className={classes.spans}>Resume</span>
         </Link>
-        <Link className={classes.button} to='/Contact' style={{textDecoration: 'none'}}>
+        <Link className={classes.button} to='/Contact' style={{textDecoration: 'none'}} onClick={() => focuseLink(3)}>
                 <MailOutlineIcon className={classes.icons} fontSize='large'/>
                 <span className={classes.spans}>Contact</span>
+        </Link>
+        <Link className={classes.button} to='/Portfolio' style={{textDecoration: 'none'}} onClick={() => focuseLink(4)}>
+                <MailOutlineIcon className={classes.icons} fontSize='large'/>
+                <span className={classes.spans}>Portfolio</span>
         </Link>
     </div>
   )
