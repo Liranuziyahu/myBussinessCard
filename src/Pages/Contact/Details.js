@@ -46,7 +46,7 @@ const Details = () => {
 export default Details
 const useStyles = makeStyles({
     paper:{
-        width: '100%',
+        width: '80%',
         height: '30%',
         marginRight:'30px',
         fontFamily: 'Noto Serif Oriya, serif',
