@@ -4,6 +4,18 @@ import Navbar from './Navbar'
 import Profile from './Profile'
 import { makeStyles } from '@material-ui/core/styles';
 
+const Main = () => {
+  const classes = useStyles();
+  return (
+    <div className={classes.root}>
+      <div className={classes.navbar}><Navbar></Navbar></div>
+      <div className={classes.profile}><Profile/></div>
+      <div className={classes.main}><Outlet></Outlet></div>
+    </div> 
+  )
+}
+export default Main
+
 const useStyles = makeStyles({
   root:{
     position: 'relative',
@@ -36,16 +48,3 @@ const useStyles = makeStyles({
       height: '100vh',
     }
   });
-const Main = () => {
-  const classes = useStyles();
-
-  return (
-    <div className={classes.root}>
-      <div className={classes.navbar}><Navbar></Navbar></div>
-      <div className={classes.profile}><Profile/></div>
-      <div className={classes.main}><Outlet></Outlet></div>
-    </div> 
-  )
-}
-
-export default Main

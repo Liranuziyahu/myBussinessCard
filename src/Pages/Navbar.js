@@ -14,23 +14,17 @@ const NavBar = () => {
 
   return (
     <div className={classes.root}>
-        <Link to='/home' style={{textDecoration: 'none'}}>
-            <div className={classes.button}>
+        <Link className={classes.button} to='/home' style={{textDecoration: 'none'}}>
                 <RoofingIcon className={classes.icons} fontSize='large'/>
                 <span className={classes.spans}>Home</span>
-            </div>
         </Link>
-        <Link to='/about' style={{textDecoration: 'none'}}>
-            <div className={classes.button}>
+        <Link className={classes.button} to='/about' style={{textDecoration: 'none'}}>
                 <PersonOutlineIcon className={classes.icons} fontSize='large'/>
                 <span className={classes.spans}>About</span>
-            </div>
         </Link>
-        <Link to='/Contact' style={{textDecoration: 'none'}}>
-            <div className={classes.button}>
+        <Link className={classes.button} to='/Contact' style={{textDecoration: 'none'}}>
                 <MailOutlineIcon className={classes.icons} fontSize='large'/>
                 <span className={classes.spans}>Contact</span>
-            </div>
         </Link>
     </div>
   )

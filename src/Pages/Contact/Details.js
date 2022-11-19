@@ -5,6 +5,7 @@ import CallIcon from '@mui/icons-material/Call';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import RoomIcon from '@mui/icons-material/Room';
 import { makeStyles } from '@material-ui/core/styles';
+import '../../CSS/fonts.css';
 
 const Details = () => {
     const classes = useStyles();
@@ -14,11 +15,9 @@ const Details = () => {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center',
-        height:'30vh',
         alignItems: 'flex-end',
         '& > :not(style)': {
-          m: 1,
-        
+          m: 1,  
         },
       }}>
 
@@ -47,9 +46,12 @@ const Details = () => {
 export default Details
 const useStyles = makeStyles({
     paper:{
-        width: '17vw',
-        height: '10vw',
+        width: '100%',
+        height: '30%',
         marginRight:'30px',
+        fontFamily: 'Noto Serif Oriya, serif',
+        fontSize: '20px',
+
     },
     group:{
         display: 'flex',
@@ -58,6 +60,8 @@ const useStyles = makeStyles({
         flexDirection:'column',
         justifyContent: 'center',
         alignItems: 'center',
-        color:'#04b4e0'
+        color:'#04b4e0',
+        borderRadius: '24px',
+        boxShadow:'0 10px 10px -8px rgb(0 0 0 / 22%)',
     }
 })

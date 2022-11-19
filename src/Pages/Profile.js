@@ -4,6 +4,8 @@ import emoji from '../imgs/emoji.jpg';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
+import {Link} from 'react-router-dom'
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 </style>
@@ -19,11 +21,11 @@ const classes = useStyles();
             <h4 className={classes.role}>Web Developer</h4>
             <div className={classes.buttons}>
             <LinkedInIcon fontSize='large' onClick={() => window.open('https://www.linkedin.com/in/liran-uziyahu/')}/>
-            <GitHubIcon fontSize='large' onClick={() => window.open('https://www.linkedin.com/in/liran-uziyahu/')}/> 
+            <GitHubIcon fontSize='large' onClick={() => window.open('https://github.com/Liranuziyahu')}/> 
             <EmailIcon fontSize='large' onClick={() => window.open('mailto:Liranuzistud@gmail.com')}/>
             </div>
         </div>
-        <button className={classes.resume}>Download CV</button>
+        <Link className={classes.resume} to="/files/Liran Uziyahu Developer.pdf" target="_blank" download>Download CV</Link>
     </div>
   )
 }
@@ -84,7 +86,7 @@ const useStyles = makeStyles({
         fontFamily:'Poppins, sans-serif',
         fontWeight:300,
         marginTop:'-30px',
-       
+        textDecoration:'none',
             "&:hover": {
                 backgroundColor: '#fff',
                 color:'#04b4e0'

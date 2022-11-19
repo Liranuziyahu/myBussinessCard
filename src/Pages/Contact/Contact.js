@@ -9,8 +9,10 @@ const Contact = () => {
   return (
     <div className={classes.root}>
         <h2 className={classes.title}>Contact</h2>
-        <Form/>
-        <Details/>
+        <div className={classes.groupSection}>
+          <Form/>
+          <Details/>
+        </div>
     </div>
   )
 }
@@ -20,13 +22,17 @@ export default Contact
 const useStyles = makeStyles({
 
 root:{
-    padding:'25px',
+    padding:'20px',
     overflowY:'scroll',
-    height:'100vh'
+    height:'100vh',
   },
   title:{
     fontFamily:'Roboto, sans-serif',
     fontWeight:600,
     fontSize:40
   },
+  groupSection:{
+    display:'flex',
+    width: '100%',
+  }
 })

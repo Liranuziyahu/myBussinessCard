@@ -2,10 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { FormControl } from '@mui/material';
 import TextField from '@mui/material/TextField';
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
-</style>
+import '../../CSS/fonts.css';
 
 const Form = () => {
   const classes = useStyles();
@@ -44,32 +41,30 @@ export default Form
 const useStyles = makeStyles({
   form:{
     display: 'flex',
-    width:'60vw',
-    height:'50vh',
+    width:'100%',
+    height:'100%',
     alignContent: 'flex-start',
     flexDirection:'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-evenly',
   },
   input:{
     display:'inline-block',
-    marginRight:'3px',
-    marginTop:'15px'
+    marginRight:'13px',
+    marginTop:'15px',
   },
   sendbtn:{
     width:'200px',
     height:'50px',
-    marginTop: '30px',
-    backgroundColor: 'transparent',
-    border: '1px solid white',
+    backgroundColor: '#04b4e0',
+    border: '0px',
+    marginTop:10,
     borderRadius: '30px',
     padding:'15px 20px',
-    fontSize:'18px',
+    fontSize:'19px',
     boxShadow:'0 10px 10px -8px rgb(0 0 0 / 22%)',
-    fontFamily:'Poppins, sans-serif',
-    fontWeight:300,
+    fontFamily: 'Noto Serif Oriya, serif',
         "&:hover": {
-            backgroundColor: 'rgb(7, 177, 77, 0.42)',
             color:'#fff'
           }
   }
