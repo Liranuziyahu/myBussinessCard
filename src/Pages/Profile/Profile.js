@@ -1,44 +1,17 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import emoji from '../../imgs/emoji.jpg';
+import avatar from '../../imgs/avatar.jpg';
+import CvResume from './../../files/Liran Uziyahu Developer.pdf'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import IconButton from '@mui/material/IconButton';
-import CvResume from './../../files/Liran Uziyahu Developer.pdf'
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 </style>
 
-const Profile = () => {
-const classes = useStyles();
-
-  return (
-    <div className={classes.root}>
-        <img className={classes.emoji} src={emoji} alt='Liran emoji'></img>
-        <div className={classes.about}>
-            <h2 className={classes.name}>Liran Uziyahu</h2>
-            <h4 className={classes.role}>Web Developer</h4>
-            <div className={classes.buttons}>
-            <IconButton style={{color:'white'}} onClick={() => window.open('https://www.linkedin.com/in/liran-uziyahu/')}>
-                <LinkedInIcon fontSize='large'/>
-            </IconButton>
-            <IconButton style={{color:'white'}} onClick={() => window.open('https://github.com/Liranuziyahu')}>
-                <GitHubIcon fontSize='large'/> 
-            </IconButton>
-            <IconButton style={{color:'white'}} onClick={() => window.open('mailto:Liranuzistud@gmail.com')}>
-                <EmailIcon fontSize='large'/>
-            </IconButton>
-            </div>
-        </div>
-        <a className={classes.resume} href={CvResume} download="Liran Uziyahu Developer">Download CV</a>
-    </div>
-  )
-}
-
-export default Profile
-
+const Profile = ({props}) => {
 const useStyles = makeStyles({
     root: {
         display: 'flex',
@@ -63,11 +36,11 @@ const useStyles = makeStyles({
         alignItems: 'center',
         marginTop:'-45px'
     },
-    emoji:{
+    avatar:{
         width: '200px',
-        height: '200px',
+        height:'200px',
         borderRadius:'50%',
-        border: '3px solid #fff'
+        border: '3px solid #fff',
     },
     name:{
         fontSize:'36px',
@@ -100,3 +73,30 @@ const useStyles = makeStyles({
               }
     }
   });
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+        <img className={classes.avatar} src={avatar} alt='Liran emoji'></img>
+        <div className={classes.about}>
+            <h2 className={classes.name}>Liran Uziyahu</h2>
+            <h4 className={classes.role}>Web Developer</h4>
+            <div className={classes.buttons}>
+            <IconButton style={{color:'white'}} onClick={() => window.open('https://www.linkedin.com/in/liran-uziyahu/')}>
+                <LinkedInIcon fontSize='large'/>
+            </IconButton>
+            <IconButton style={{color:'white'}} onClick={() => window.open('https://github.com/Liranuziyahu')}>
+                <GitHubIcon fontSize='large'/> 
+            </IconButton>
+            <IconButton style={{color:'white'}} onClick={() => window.open('mailto:Liranuzistud@gmail.com')}>
+                <EmailIcon fontSize='large'/>
+            </IconButton>
+            </div>
+        </div>
+        <a className={classes.resume} href={CvResume} download="Liran Uziyahu Developer">Download CV</a>
+    </div>
+  )
+}
+
+export default Profile
+
