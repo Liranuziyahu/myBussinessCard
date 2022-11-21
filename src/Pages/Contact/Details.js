@@ -6,40 +6,45 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import RoomIcon from '@mui/icons-material/Room';
 import { makeStyles } from '@material-ui/core/styles';
 import '../../CSS/fonts.css';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 
 const Details = () => {
     const classes = useStyles();
+    const theme = useTheme()
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
-  return (
-    <Box sx={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'center',
-        alignItems: 'flex-end',
-        '& > :not(style)': {
-          m: 1,  
-        },
-      }}>
-
-        <Paper elevation={3} className={classes.paper} >
-            <div className={classes.group}>
-                <CallIcon fontSize='large'/>
-                <h4>050-364-9949</h4>
-            </div>
-        </Paper>
-        <Paper className={classes.paper} elevation={3} >
-            <div className={classes.group}>
-                <AlternateEmailIcon fontSize='large'/>
-                <h4>Liranuzistud@gmail.com</h4>
-            </div>
-        </Paper> 
-        <Paper className={classes.paper} elevation={3} >
-            <div className={classes.group}>
-                <RoomIcon fontSize='large'/>
-                <h4>Center</h4>
-            </div>
-        </Paper>
-    </Box>
+    return (
+        <Box sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            marginTop: isMobile ? 5 : 0,
+            justifyContent: 'center',
+            alignItems: 'flex-end',
+            '& > :not(style)': {
+            m: 1,  
+            },
+        }}>
+            <Paper elevation={3} className={classes.paper} >
+                <div className={classes.group}>
+                    <CallIcon fontSize='large'/>
+                    <h4>050-364-9949</h4>
+                </div>
+            </Paper>
+            <Paper className={classes.paper} elevation={3} >
+                <div className={classes.group}>
+                    <AlternateEmailIcon fontSize='large'/>
+                    <h4>Liranuzistud@gmail.com</h4>
+                </div>
+            </Paper> 
+            <Paper className={classes.paper} elevation={3} >
+                <div className={classes.group}>
+                    <RoomIcon fontSize='large'/>
+                    <h4>Center</h4>
+                </div>
+            </Paper>
+        </Box>
   )
 }
 
@@ -51,7 +56,6 @@ const useStyles = makeStyles({
         marginRight:'30px',
         fontFamily: 'Noto Serif Oriya, serif',
         fontSize: '20px',
-
     },
     group:{
         display: 'flex',

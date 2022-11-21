@@ -1,10 +1,6 @@
 import React , {useRef} from 'react'
 import {Link} from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import RoofingIcon from '@mui/icons-material/Roofing';
-import AssignmentIndTwoToneIcon from '@mui/icons-material/AssignmentIndTwoTone';
 import '../../CSS/fonts.css';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';

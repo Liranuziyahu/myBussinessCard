@@ -5,9 +5,86 @@ import WysiwygIcon from '@mui/icons-material/Wysiwyg';
 import StorageIcon from '@mui/icons-material/Storage';
 import CloudSyncIcon from '@mui/icons-material/CloudSync';
 import '../../CSS/fonts.css'
-
+import { useTheme } from '@mui/material/styles';
 
 const About = () => {
+  const theme = useTheme()
+
+  const useStyles = makeStyles({
+    root:{
+      overflowY:'scroll',
+      height: 'auto',
+      maxHeight: '100%',
+    },
+    body:{
+      padding:25
+    },
+    titles:{
+      fontSize:40,
+      fontFamily:'Poppins, sans-serif',
+      fontWeight:500,
+      '& h4':{
+        display:'inline-block',
+        fontSize:'30px',
+      } ,
+    },  
+    subtitle:{
+      fontSize:'25px',
+      fontFamily:'Poppins, sans-serif',
+      fontWeight:500,
+    },
+    span:{
+      color:'#04b4e0',
+      fontWeight:600,
+    },
+    section:{
+      display:'flex',
+      width:'100%',
+      height:'auto',
+      flexWrap:'wrap',
+      flexDirection:'',
+      justifyContent: 'space-around',
+      [theme.breakpoints.down('sm')]:{
+        flexDirection:'column'
+      }
+    },
+    columns:{
+      display:'flex',
+      flexDirection:'column',
+    },
+    textDecoration:{
+      display:'flex',
+      width:'50%',
+      flexDirection:'column',
+      alignItems: 'stretch',
+      alignContent: 'space-around',
+      flexWrap:'wrap',
+      fontFamily:'Poppins, sans-serif',
+      lineHeight: '1.65em',
+      fontWeight:300,
+      color:'#555',
+      [theme.breakpoints.down('sm')]:{
+        width:'100% !important',
+        alignContent:'normal',
+        marginBottom:15
+      }
+    },
+    textColor:{
+      color:'#555',
+      fontSize:'20px'
+    },
+    marginBottom:{
+      marginBottom:'10px'
+    },
+    cards:{
+      width:'40%',
+      marginTop:'50px',
+      [theme.breakpoints.down('sm')]:{
+        width:'100%'
+      }
+    }
+  })
+
   const classes = useStyles();
 
   return (
@@ -69,65 +146,3 @@ const About = () => {
 
 export default About
 
-const useStyles = makeStyles({
-  root:{
-    overflowY:'scroll',
-    height: 'auto',
-    maxHeight: '100%',
-  },
-  body:{
-    padding:25
-  },
-  titles:{
-    fontSize:40,
-    fontFamily:'Poppins, sans-serif',
-    fontWeight:500,
-    '& h4':{
-      display:'inline-block',
-      fontSize:'30px',
-    } ,
-  },  
-  subtitle:{
-    fontSize:'25px',
-    fontFamily:'Poppins, sans-serif',
-    fontWeight:500,
-  },
-  span:{
-    color:'#04b4e0',
-    fontWeight:600,
-  },
-  section:{
-    display:'flex',
-    width:'100%',
-    height:'auto',
-    flexWrap:'wrap',
-    justifyContent: 'space-around',
-  },
-  columns:{
-    display:'flex',
-    flexDirection:'column',
-  },
-  textDecoration:{
-    display:'flex',
-    width:'50%',
-    flexDirection:'column',
-    alignItems: 'stretch',
-    alignContent: 'space-around',
-    flexWrap:'wrap',
-    fontFamily:'Poppins, sans-serif',
-    lineHeight: '1.65em',
-    fontWeight:300,
-    color:'#555',
-  },
-  textColor:{
-    color:'#555',
-    fontSize:'20px'
-  },
-  marginBottom:{
-    marginBottom:'10px'
-  },
-  cards:{
-    width:'40%',
-    marginTop:'50px'
-  }
-})

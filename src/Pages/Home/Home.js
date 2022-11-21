@@ -30,7 +30,8 @@ const useStyles = makeStyles({
         lineHeight: '74px',
         fontWeight:500,
         margin: 0,
-        color:'#222'
+        color:'#222',
+        textAlign: 'center',
     },
     role:{
       color:'#888',
