@@ -6,11 +6,11 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 
 
-const NavbarMobile = () => {
+const NavbarMobile = ({props}) => {
     const LinksControl = useRef(null);
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
+    console.log(props.setControlNavbar)
     const useStyles = makeStyles({
         root: {
             display: 'flex',
@@ -59,19 +59,19 @@ const NavbarMobile = () => {
     
   return (
     <div className={classes.root} ref={LinksControl}>
-        <Link className={classes.button} to='/' style={{textDecoration: 'none',backgroundColor:'rgba(22, 32, 10, 0.07)' }} onClick={() => focuseLink(0)}>
+        <Link className={classes.button} to='/' style={{textDecoration: 'none',backgroundColor:'rgba(22, 32, 10, 0.07)' }} onClick={() => {focuseLink(0); props.setControlNavbar(false)}}>
                 <span className={classes.spans} style={{fontWeight:'600'}}>Home</span>
         </Link>
-        <Link className={classes.button} to='/about' style={{textDecoration: 'none'}} onClick={() => focuseLink(1)}>
+        <Link className={classes.button} to='/about' style={{textDecoration: 'none'}} onClick={() => {focuseLink(1); props.setControlNavbar(false)}}>
                 <span className={classes.spans}>About</span>
         </Link>
-        <Link className={classes.button} to='/Resume' style={{textDecoration: 'none'}} onClick={() => focuseLink(2)}>
+        <Link className={classes.button} to='/Resume' style={{textDecoration: 'none'}} onClick={() => {focuseLink(2); props.setControlNavbar(false)}}>
                 <span className={classes.spans}>Resume</span>
         </Link>
-        <Link className={classes.button} to='/Contact' style={{textDecoration: 'none'}} onClick={() => focuseLink(3)}>
+        <Link className={classes.button} to='/Contact' style={{textDecoration: 'none'}} onClick={() => {focuseLink(3); props.setControlNavbar(false)}}>
                 <span className={classes.spans}>Contact</span>
         </Link>
-        <Link className={classes.button} to='/Portfolio' style={{textDecoration: 'none'}} onClick={() => focuseLink(4)}>
+        <Link className={classes.button} to='/Portfolio' style={{textDecoration: 'none'}} onClick={() => {focuseLink(4); props.setControlNavbar(false)}}>
                 <span className={classes.spans}>Portfolio</span>
         </Link>
     </div>

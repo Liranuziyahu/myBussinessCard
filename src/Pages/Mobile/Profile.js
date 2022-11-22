@@ -48,7 +48,7 @@ const useStyles = makeStyles({
         border: '3px solid #fff',
     },
     name:{
-        fontSize:'36px',
+        fontSize:'26px',
         fontFamily:'Poppins, sans-serif',
         lineHeight:'1em',
         fontWeight:600,
@@ -93,7 +93,7 @@ const useStyles = makeStyles({
         <div className={classes.about}>
             <h2 className={classes.name}>Liran Uziyahu</h2>
             <h4 className={classes.role}>Web Developer</h4>
-            <NavbarMobile/>
+            <NavbarMobile props={{setControlNavbar:props.setControlNavbar}}/>
             <div className={classes.buttons}>
             <IconButton style={{color:'white'}} onClick={() => window.open('https://www.linkedin.com/in/liran-uziyahu/')}>
                 <LinkedInIcon fontSize='large'/>
