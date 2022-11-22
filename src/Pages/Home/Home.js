@@ -25,7 +25,7 @@ const useStyles = makeStyles({
       alignItems: 'center',
   },
     name:{
-        fontSize:'60px',
+        fontSize:'50px',
         fontFamily:'Roboto, sans-serif',
         lineHeight: '74px',
         fontWeight:500,

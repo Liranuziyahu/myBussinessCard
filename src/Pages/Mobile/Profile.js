@@ -8,13 +8,14 @@ import EmailIcon from '@mui/icons-material/Email';
 import IconButton from '@mui/material/IconButton';
 import NavbarMobile from './NavbarMobile';
 import CloseIcon from '@mui/icons-material/Close';
+import { useTheme } from "@mui/material/styles";
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 </style>
 
 const Profile = ({props}) => {
-
+const theme = useTheme()
 const useStyles = makeStyles({
     root: {
         display: 'flex',
@@ -26,6 +27,16 @@ const useStyles = makeStyles({
         color: 'white',
         overflow:'hidden',
         backgroundColor: '#04b4e0',
+        float:'right',
+        animation:`$OpenNavbar 1000ms ${theme.transitions.easing.easeInOut}`
+    },
+    "@keyframes OpenNavbar": {
+      "0%": {
+        width: '80%',
+      },
+      "100%": {
+        width:'100%',
+      }
     },
     buttons:{
         display:'flex',

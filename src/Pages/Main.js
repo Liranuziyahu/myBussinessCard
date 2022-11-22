@@ -45,9 +45,6 @@ const Main = () => {
         minHeight: '100vh',
         height: '100vh',
       },
-
-
-      
       rootMobile:{
         position:'relative',
         width: '100%',
@@ -75,7 +72,10 @@ const Main = () => {
         position: 'absolute',
         right:20,
         top:20,
-        zIndex:90
+        zIndex:90,
+        borderRadius:'50%',
+        padding:10,
+        backgroundColor: '#04b4e0'
       }
     });
 
@@ -84,25 +84,24 @@ const Main = () => {
 
   return (
     <>
-     {
-       isMobile ? (
-        <>
-          <div className={classes.rootMobile}>
-            <div className={classes.profileMobile}><ProfileMobile props={{setControlNavbar}}/></div>
-            <MenuIcon className={classes.menuHamburger} onClick={() => setControlNavbar(true)}/>
-            <div className={classes.mainMobile}><Outlet></Outlet></div>
+      {
+        isMobile ? (
+          <>
+            <div className={classes.rootMobile}>
+              <div className={classes.profileMobile}><ProfileMobile props={{setControlNavbar}}/></div>
+              <MenuIcon className={classes.menuHamburger} onClick={() => setControlNavbar(true)}/>
+              <div className={classes.mainMobile}><Outlet></Outlet></div>
+            </div>
+          </> 
+        )
+        : //Desktop
+        (
+          <div className={classes.root}>
+            <div className={classes.navbar}><Navbar></Navbar></div>
+            <div className={classes.profile}><Profile/></div>
+            <div className={classes.main}><Outlet></Outlet></div>
           </div>
-         
-        </> 
-       )
-       : //Desktop
-       ( 
-      <div className={classes.root}>
-        <div className={classes.navbar}><Navbar></Navbar></div>
-        <div className={classes.profile}><Profile/></div>
-        <div className={classes.main}><Outlet></Outlet></div>
-      </div> 
-      )
+        )
       }
     </>
    
