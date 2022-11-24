@@ -65,10 +65,10 @@ const Main = () => {
         overflow:'hidden',
       },
       mainMobile:{
-        display: !controlNavbar ? 'unset' : 'none',
-        height: '90%',
-        minHeight: '90%',
-        margin:'20px 20px 120px 20px',
+        display: !controlNavbar ? ' ' : 'none',
+        height: '100%',
+        width:'100%',
+        minHeight: '100%',
       },
       menuHamburger:{
         position: 'absolute',
@@ -90,8 +90,8 @@ const Main = () => {
         isMobile ? (
           <>
             <div className={classes.rootMobile}>
+            <MenuIcon className={classes.menuHamburger} onClick={() => setControlNavbar(true)}/>
               <div className={classes.profileMobile}><ProfileMobile props={{setControlNavbar}}/></div>
-              <MenuIcon className={classes.menuHamburger} onClick={() => setControlNavbar(true)}/>
               <div className={classes.mainMobile}><Outlet></Outlet></div>
             </div>
           </> 

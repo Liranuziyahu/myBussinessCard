@@ -14,8 +14,9 @@ const About = () => {
     root:{
       height:'100%',
       [theme.breakpoints.down('sm')]:{
-        marginBottom:100,
+        height:'90%',
         overflowY:'scroll',
+        padding:20
       },
     },
     titles:{
