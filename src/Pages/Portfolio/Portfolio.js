@@ -7,19 +7,20 @@ import { useTheme } from '@mui/material/styles';
 const Portfolio = () => {
   const theme = useTheme()
   const useStyles = makeStyles({
-    root:{
-      height:'100%',
-      [theme.breakpoints.down('sm')]:{
-        marginBottom:100,
-        // overflowY:'scroll',
-      },
-    }
+    root: {
+      display: 'flex',
+      width: '100%',
+      height: '100%',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+  },
   })
     const classes = useStyles()
 
   return (
     <div className={classes.root}>
-      <h1 style={{display:'flex',justifyContent: 'center',alignItems: 'center',height: '100%'}}>
+      <h1>
         Coming soon
       </h1>
     </div>

@@ -49,16 +49,15 @@ const Main = () => {
         margin:20
       },
       rootMobile:{
-        position:'absolute',
-        width: '100%',
-        height: '100%',
+        width: '100vw',
+        height: '100vh',
         overflow:'hidden',
       },
       profileMobile:{
         position:'sticky',
         display: controlNavbar ? 'unset' : 'none',
-        height: '90%',
-        minHeight: '90%',
+        height: '100%',
+        minHeight: '100%',
         bottom:0,
         top:0,
         right:0,
@@ -66,6 +65,7 @@ const Main = () => {
         overflow:'hidden',
       },
       mainMobile:{
+        display: !controlNavbar ? 'unset' : 'none',
         height: '90%',
         minHeight: '90%',
         margin:'20px 20px 120px 20px',

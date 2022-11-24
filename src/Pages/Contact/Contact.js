@@ -11,9 +11,9 @@ const Contact = () => {
 
       root:{
           height:'100%',
-          overflowY:'scroll',
           [theme.breakpoints.down('sm')]:{
-            marginBottom:100
+            marginBottom:100,
+            overflowY:'scroll',
           },
          },
         title:{
