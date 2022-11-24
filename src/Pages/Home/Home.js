@@ -19,13 +19,13 @@ const useStyles = makeStyles({
   root: {
       display: 'flex',
       width: '100%',
-      height: '100%',
+      height: '80vh',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
   },
     name:{
-        fontSize:'50px',
+        fontSize:'40px',
         fontFamily:'Roboto, sans-serif',
         lineHeight: '74px',
         fontWeight:500,

@@ -72,7 +72,7 @@ const Main = () => {
         overflow:'hidden',
       },
       menuHamburger:{
-        display: !controlNavbar ? 'inline-block' : 'none',
+        display: !controlNavbar ? 'flex' : 'none',
         position: 'fixed',
         top:10,
         right:10,
@@ -80,6 +80,10 @@ const Main = () => {
         borderRadius:'50%',
         padding:10,
         backgroundColor: '#04b4e0',
+        height: '25px',
+        width: '25px',
+        justifyContent: 'center',
+        alignItems: 'center',
       }
     });
 

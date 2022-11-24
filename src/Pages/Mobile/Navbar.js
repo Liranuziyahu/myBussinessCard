@@ -84,7 +84,7 @@ const useStyles = makeStyles({
         boxShadow:'0 10px 10px -8px rgb(0 0 0 / 22%)',
         fontFamily:'Poppins, sans-serif',
         fontWeight:300,
-        marginTop:'20px',
+        margin:'20px 0px',
         textDecoration:'none',
             "&:hover": {
                 backgroundColor: '#fff',

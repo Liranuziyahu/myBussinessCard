@@ -10,7 +10,7 @@ const Portfolio = () => {
     root: {
       display: 'flex',
       width: '100%',
-      height: '100%',
+      height: '80vh',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
