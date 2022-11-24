@@ -6,7 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import IconButton from '@mui/material/IconButton';
-import NavbarMobile from './NavbarMobile';
+import Links from './Links';
 import CloseIcon from '@mui/icons-material/Close';
 import { useTheme } from "@mui/material/styles";
 
@@ -50,13 +50,14 @@ const useStyles = makeStyles({
         width:'100%',
         flexDirection: 'column',
         alignItems: 'center',
-        marginTop:'-45px'
+        marginTop:'-85px'
     },
     avatar:{
         width: '150px',
         height:'150px',
         borderRadius:'50%',
         border: '3px solid #fff',
+        marginBottom:'15px'
     },
     name:{
         fontSize:'26px',
@@ -82,7 +83,7 @@ const useStyles = makeStyles({
         boxShadow:'0 10px 10px -8px rgb(0 0 0 / 22%)',
         fontFamily:'Poppins, sans-serif',
         fontWeight:300,
-        marginTop:'-30px',
+        marginTop:'20px',
         textDecoration:'none',
             "&:hover": {
                 backgroundColor: '#fff',
@@ -100,11 +101,11 @@ const useStyles = makeStyles({
   return (
     <div className={classes.root}>
         <CloseIcon className={classes.close} onClick={() => props.setControlNavbar(controller => !controller)} />
-        <img className={classes.avatar} src={avatar} alt='Liran emoji'></img>
         <div className={classes.about}>
+        <img className={classes.avatar} src={avatar} alt='Liran emoji'></img>
             <h2 className={classes.name}>Liran Uziyahu</h2>
             <h4 className={classes.role}>Web Developer</h4>
-            <NavbarMobile props={{setControlNavbar:props.setControlNavbar}}/>
+            <Links props={{setControlNavbar:props.setControlNavbar}}/>
             <div className={classes.buttons}>
             <IconButton style={{color:'white'}} onClick={() => window.open('https://www.linkedin.com/in/liran-uziyahu/')}>
                 <LinkedInIcon fontSize='large'/>
@@ -116,8 +117,8 @@ const useStyles = makeStyles({
                 <EmailIcon fontSize='large'/>
             </IconButton>
             </div>
+            <a className={classes.resume} href={CvResume} download="Liran Uziyahu Developer">Download CV</a>
         </div>
-        <a className={classes.resume} href={CvResume} download="Liran Uziyahu Developer">Download CV</a>
     </div>
   )
 }

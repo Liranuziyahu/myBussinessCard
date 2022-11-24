@@ -5,21 +5,20 @@ import '../../CSS/fonts.css';
 import { useTheme } from '@mui/material/styles';
 
 const Resume = () => {
-  const theme = useTheme()
-  
-const useStyles = makeStyles({
-  root:{
-    height:'100%',
-    [theme.breakpoints.down('sm')]:{
-      height:'90%',
-      overflowY:'scroll',
-      padding:20
+  const theme = useTheme() 
+  const useStyles = makeStyles({
+    root:{
+      height:'100%',
+      [theme.breakpoints.down('sm')]:{
+        height:'90%',
+        overflowY:'scroll',
+        padding:20
+      },
     },
-  },
-  timeline:{
-    width:'90%',
-  }
-})
+    timeline:{
+      width:'90%',
+    }
+  })
   const classes = useStyles()
   return (
     <div className={classes.root}>
@@ -39,5 +38,4 @@ const useStyles = makeStyles({
     </div>
   )
 }
-
 export default Resume

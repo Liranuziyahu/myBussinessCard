@@ -6,9 +6,7 @@ import { useTheme } from '@mui/material/styles';
 
 const Contact = () => {
     const theme = useTheme()
-
     const useStyles = makeStyles({
-
       root:{
           height:'100%',
           [theme.breakpoints.down('sm')]:{
@@ -47,6 +45,5 @@ const Contact = () => {
     </div>
   )
 }
-
 export default Contact
 

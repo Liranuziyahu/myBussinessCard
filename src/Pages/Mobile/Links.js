@@ -6,7 +6,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 
 
-const NavbarMobile = ({props}) => {
+const Links = ({props}) => {
     const LinksControl = useRef(null);
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -14,12 +14,13 @@ const NavbarMobile = ({props}) => {
     const useStyles = makeStyles({
         root: {
             display: 'flex',
-            width: '100%',
-            height: '100%',
+            width: '50%',
+            height: '50%',
             flexDirection: 'column',
             flexWrap: 'nowrap',
             justifyContent: 'center',
             alignItems: 'stretch',
+            margin:'10px'
         },
         button:{
             display:'flex',
@@ -78,5 +79,5 @@ const NavbarMobile = ({props}) => {
   )
 }
 
-export default NavbarMobile
+export default Links
 

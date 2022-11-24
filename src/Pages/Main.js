@@ -2,7 +2,7 @@ import React , {useState} from 'react'
 import {Outlet} from 'react-router-dom'
 import Navbar from './Navbar/Navbar'
 import Profile from './Profile/Profile'
-import ProfileMobile from './Mobile/Profile'
+import NavbarMobile from './Mobile/Navbar'
 import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from '@material-ui/core/styles';
 import { useTheme } from '@mui/material/styles';
@@ -53,7 +53,7 @@ const Main = () => {
         height: '100vh',
         overflow:'hidden',
       },
-      profileMobile:{
+      NavbarMobile:{
         position:'sticky',
         display: controlNavbar ? 'unset' : 'none',
         height: '100%',
@@ -91,7 +91,7 @@ const Main = () => {
           <>
             <div className={classes.rootMobile}>
             <MenuIcon className={classes.menuHamburger} onClick={() => setControlNavbar(true)}/>
-              <div className={classes.profileMobile}><ProfileMobile props={{setControlNavbar}}/></div>
+              <div className={classes.profileMobile}><NavbarMobile props={{setControlNavbar}}/></div>
               <div className={classes.mainMobile}><Outlet></Outlet></div>
             </div>
           </> 
