@@ -11,6 +11,7 @@ const Contact = () => {
           height:'100%',
           [theme.breakpoints.down('sm')]:{
             height:'90%',
+            overflowY:'scroll',
             padding:20
           },
          },
