@@ -53,7 +53,7 @@ const Main = () => {
       rootMobile:{
         position: 'relative',
         width: '100%',
-        height: '100%',
+        height: '100vh',
       },
       NavbarMobile:{
         display: controlNavbar ? ' ' : 'none',
@@ -67,15 +67,15 @@ const Main = () => {
         left:0,
         right:0,
         top:0,
-        padding:30,
+        padding:60,
         display: !controlNavbar ? ' ' : 'none',
         overflow:'hidden',
       },
       menuHamburger:{
-        position: 'absolute',
-        display: !controlNavbar ? ' ' : 'none',
-        right:20,
-        top:20,
+        display: !controlNavbar ? 'inline-block' : 'none',
+        position: 'fixed',
+        top:10,
+        right:10,
         zIndex:90,
         borderRadius:'50%',
         padding:10,
@@ -92,7 +92,7 @@ const Main = () => {
         isMobile ? (
           <>
             <div className={classes.rootMobile}>
-              <div className={classes.menuHamburger} onClick={() => setControlNavbar(true)}><MenuIcon></MenuIcon></div>
+              <div className={classes.menuHamburger} onClick={() => setControlNavbar(true)}>< MenuIcon></MenuIcon></div>
               <div className={classes.NavbarMobile}><NavbarMobile props={{setControlNavbar}}/></div>
               <div className={classes.mainMobile}><Outlet></Outlet></div>
             </div>
