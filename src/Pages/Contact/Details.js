@@ -11,8 +11,31 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 
 const Details = () => {
-    const classes = useStyles();
     const theme = useTheme()
+    const useStyles = makeStyles({
+        paper:{
+            width: '100%',
+            height: '30%',
+            marginRight:'30px',
+            fontFamily: 'Noto Serif Oriya, serif',
+            fontSize: '20px',
+        },
+        group:{
+            display: 'flex',
+            width: '100%',
+            height:'100%',
+            flexDirection:'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            color:'#04b4e0',
+            borderRadius: '24px',
+            boxShadow:'0 10px 10px -8px rgb(0 0 0 / 22%)',
+            [theme.breakpoints.down('sm')]:{
+                justifyContent: 'flex-end',
+            }
+        }
+    })
+    const classes = useStyles();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
     return (
@@ -49,23 +72,3 @@ const Details = () => {
 }
 
 export default Details
-const useStyles = makeStyles({
-    paper:{
-        width: '100%',
-        height: '30%',
-        marginRight:'30px',
-        fontFamily: 'Noto Serif Oriya, serif',
-        fontSize: '20px',
-    },
-    group:{
-        display: 'flex',
-        width: '100%',
-        height:'100%',
-        flexDirection:'column',
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-        color:'#04b4e0',
-        borderRadius: '24px',
-        boxShadow:'0 10px 10px -8px rgb(0 0 0 / 22%)',
-    }
-})

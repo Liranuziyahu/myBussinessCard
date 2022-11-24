@@ -48,6 +48,8 @@ const Main = () => {
         overflowY:'scroll',
         margin:20
       },
+
+    //Mobile
       rootMobile:{
         width: '100vw',
         height: '100vh',
@@ -66,9 +68,11 @@ const Main = () => {
       },
       mainMobile:{
         display: !controlNavbar ? ' ' : 'none',
-        height: '100%',
-        width:'100%',
-        minHeight: '100%',
+        height: '95%',
+        minHeight: '90%',
+        overflowX:'hidden',
+        overflowY:'scroll',
+        width: '100%'
       },
       menuHamburger:{
         display: !controlNavbar ? ' ' : 'none',

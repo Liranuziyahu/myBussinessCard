@@ -8,12 +8,10 @@ const Contact = () => {
     const theme = useTheme()
     const useStyles = makeStyles({
       root:{
-          height:'100%',
-          [theme.breakpoints.down('sm')]:{
-            height:'90%',
-            overflowY:'scroll',
-            padding:20
-          },
+        height:'100%',
+        [theme.breakpoints.down('sm')]:{
+         padding:25
+        },
          },
         title:{
           fontFamily:'Roboto, sans-serif',
