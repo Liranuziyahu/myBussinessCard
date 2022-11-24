@@ -83,13 +83,13 @@ const useStyles = makeStyles({
             <h4 className={classes.role}>Web Developer</h4>
             <div className={classes.buttons}>
             <IconButton style={{color:'white'}} onClick={() => window.open('https://www.linkedin.com/in/liran-uziyahu/')}>
-                <LinkedInIcon fontSize='small'/>
+                <LinkedInIcon fontSize='large'/>
             </IconButton>
             <IconButton style={{color:'white'}} onClick={() => window.open('https://github.com/Liranuziyahu')}>
-                <GitHubIcon fontSize='small'/> 
+                <GitHubIcon fontSize='large'/> 
             </IconButton>
             <IconButton style={{color:'white'}} onClick={() => window.open('mailto:Liranuzistud@gmail.com')}>
-                <EmailIcon fontSize='small'/>
+                <EmailIcon fontSize='large'/>
             </IconButton>
             </div>
         </div>

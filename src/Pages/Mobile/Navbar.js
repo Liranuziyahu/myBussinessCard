@@ -109,13 +109,13 @@ const useStyles = makeStyles({
             <Links props={{setControlNavbar:props.setControlNavbar}}/>
             <div className={classes.buttons}>
             <IconButton style={{color:'white'}} onClick={() => window.open('https://www.linkedin.com/in/liran-uziyahu/')}>
-                <LinkedInIcon fontSize='small'/>
+                <LinkedInIcon fontSize='meduim'/>
             </IconButton>
             <IconButton style={{color:'white'}} onClick={() => window.open('https://github.com/Liranuziyahu')}>
-                <GitHubIcon fontSize='small'/> 
+                <GitHubIcon fontSize='meduim'/> 
             </IconButton>
             <IconButton style={{color:'white'}} onClick={() => window.open('mailto:Liranuzistud@gmail.com')}>
-                <EmailIcon fontSize='small'/>
+                <EmailIcon fontSize='meduim'/>
             </IconButton>
             </div>
             <a className={classes.resume} href={CvResume} download="Liran Uziyahu Developer">Download CV</a>
