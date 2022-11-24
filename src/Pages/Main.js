@@ -51,6 +51,7 @@ const Main = () => {
       rootMobile:{
         width: '100vw',
         height: '100vh',
+        overflowY:'hidden',
       },
       NavbarMobile:{
         position:'sticky',
