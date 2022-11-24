@@ -51,7 +51,7 @@ const Details = () => {
 export default Details
 const useStyles = makeStyles({
     paper:{
-        width: '80%',
+        width: '100%',
         height: '30%',
         marginRight:'30px',
         fontFamily: 'Noto Serif Oriya, serif',
@@ -62,7 +62,7 @@ const useStyles = makeStyles({
         width: '100%',
         height:'100%',
         flexDirection:'column',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
         alignItems: 'center',
         color:'#04b4e0',
         borderRadius: '24px',

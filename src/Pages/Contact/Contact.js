@@ -10,10 +10,12 @@ const Contact = () => {
     const useStyles = makeStyles({
 
       root:{
-          padding:'20px',
+          height:'100%',
           overflowY:'scroll',
-          height:'100vh',
-        },
+          [theme.breakpoints.down('sm')]:{
+            marginBottom:100
+          },
+         },
         title:{
           fontFamily:'Roboto, sans-serif',
           fontWeight:600,

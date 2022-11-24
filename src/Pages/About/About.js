@@ -12,12 +12,11 @@ const About = () => {
 
   const useStyles = makeStyles({
     root:{
-      overflowY:'scroll',
-      height: 'auto',
-      maxHeight: '100%',
-    },
-    body:{
-      padding:25
+      height:'100%',
+      [theme.breakpoints.down('sm')]:{
+        marginBottom:100,
+        overflowY:'scroll',
+      },
     },
     titles:{
       fontSize:40,
@@ -89,7 +88,6 @@ const About = () => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.body}>
       <h2 
         className={classes.titles}>About<span className={classes.span}> Me</span>
       </h2>
@@ -139,7 +137,6 @@ const About = () => {
           <div className={classes.textColor}>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales.</div>
         </div>
         </section>  
-      </div>
      </div>
   )
 }

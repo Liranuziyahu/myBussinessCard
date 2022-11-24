@@ -19,13 +19,13 @@ const theme = useTheme()
 const useStyles = makeStyles({
     root: {
         display: 'flex',
+        position:'relative',
         width: '100%',
         height: '100%',
         flexDirection: 'column',
         justifyContent: 'space-evenly',
         alignItems: 'center',
         color: 'white',
-        overflow:'hidden',
         backgroundColor: '#04b4e0',
         float:'right',
         animation:`$OpenNavbar 1000ms ${theme.transitions.easing.easeInOut}`
@@ -91,8 +91,8 @@ const useStyles = makeStyles({
     },
     close:{
         position: 'absolute',
-        top:10,
-        right:10
+        top:20,
+        left:'90%'
     }
   });
   const classes = useStyles();

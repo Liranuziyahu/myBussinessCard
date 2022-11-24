@@ -2,8 +2,23 @@ import React from 'react'
 import Timeline from './Timeline'
 import { makeStyles } from '@material-ui/core/styles';
 import '../../CSS/fonts.css';
+import { useTheme } from '@mui/material/styles';
 
 const Resume = () => {
+  const theme = useTheme()
+  
+const useStyles = makeStyles({
+  root:{
+    height:'100%',
+    [theme.breakpoints.down('sm')]:{
+      marginBottom:100,
+      overflowY:'scroll',
+    },
+  },
+  timeline:{
+    width:'90%',
+  }
+})
   const classes = useStyles()
   return (
     <div className={classes.root}>
@@ -25,14 +40,3 @@ const Resume = () => {
 }
 
 export default Resume
-
-const useStyles = makeStyles({
-  root:{
-    padding:'0px 20px 20px 20px',
-    overflowY:'scroll',
-    height:'100vh',
-  },
-  timeline:{
-    width:'70%',
-  }
-})
