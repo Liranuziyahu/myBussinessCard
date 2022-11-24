@@ -20,14 +20,15 @@ const useStyles = makeStyles({
     root: {
         display: 'flex',
         position:'relative',
-        width: '100%',
-        height: '100%',
+        width: '100vw',
+        height: '100vh',
         flexDirection: 'column',
-        justifyContent: 'space-evenly',
+        justifyContent: 'flex-start',
         alignItems: 'center',
         color: 'white',
         backgroundColor: '#04b4e0',
         float:'right',
+        paddingTop:20,
         animation:`$OpenNavbar 1000ms ${theme.transitions.easing.easeInOut}`
     },
     "@keyframes OpenNavbar": {
@@ -50,14 +51,12 @@ const useStyles = makeStyles({
         width:'100%',
         flexDirection: 'column',
         alignItems: 'center',
-        marginTop:'-85px'
     },
     avatar:{
         width: '150px',
         height:'150px',
         borderRadius:'50%',
         border: '3px solid #fff',
-        marginBottom:'15px'
     },
     name:{
         fontSize:'26px',
@@ -66,6 +65,7 @@ const useStyles = makeStyles({
         fontWeight:600,
         margin: 0,
         textAlign: 'center',
+        marginTop:20
     },
     role:{
         fontFamily:'Poppins, sans-serif',

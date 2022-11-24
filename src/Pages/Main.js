@@ -55,7 +55,7 @@ const Main = () => {
       },
       NavbarMobile:{
         position:'sticky',
-        display: controlNavbar ? 'unset' : 'none',
+        display: controlNavbar ? ' ' : 'none',
         height: '100%',
         minHeight: '100%',
         bottom:0,
@@ -71,6 +71,7 @@ const Main = () => {
         minHeight: '100%',
       },
       menuHamburger:{
+        display: !controlNavbar ? ' ' : 'none',
         position: 'absolute',
         right:20,
         top:20,
@@ -91,7 +92,7 @@ const Main = () => {
           <>
             <div className={classes.rootMobile}>
             <MenuIcon className={classes.menuHamburger} onClick={() => setControlNavbar(true)}/>
-              <div className={classes.profileMobile}><NavbarMobile props={{setControlNavbar}}/></div>
+              <div className={classes.NavbarMobile}><NavbarMobile props={{setControlNavbar}}/></div>
               <div className={classes.mainMobile}><Outlet></Outlet></div>
             </div>
           </> 
