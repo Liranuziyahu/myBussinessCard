@@ -51,20 +51,18 @@ const Main = () => {
 
     //Mobile
       rootMobile:{
+        display:'flex',
+        flexDirection: 'column',
         width: '100vw',
         height: '100vh',
         overflowY:'hidden',
       },
       NavbarMobile:{
-        position:'sticky',
         display: controlNavbar ? ' ' : 'none',
         height: '100%',
-        minHeight: '100%',
-        bottom:0,
-        top:0,
-        right:0,
-        zIndex:99,
+        width: '100%',
         overflow:'hidden',
+        zIndex:99,
       },
       mainMobile:{
         display: !controlNavbar ? ' ' : 'none',
@@ -75,8 +73,8 @@ const Main = () => {
         width: '100%'
       },
       menuHamburger:{
-        display: !controlNavbar ? ' ' : 'none',
         position: 'absolute',
+        display: !controlNavbar ? ' ' : 'none',
         right:20,
         top:20,
         zIndex:90,
@@ -95,7 +93,7 @@ const Main = () => {
         isMobile ? (
           <>
             <div className={classes.rootMobile}>
-            <MenuIcon className={classes.menuHamburger} onClick={() => setControlNavbar(true)}/>
+              <div className={classes.menuHamburger} onClick={() => setControlNavbar(true)}><MenuIcon></MenuIcon></div>
               <div className={classes.NavbarMobile}><NavbarMobile props={{setControlNavbar}}/></div>
               <div className={classes.mainMobile}><Outlet></Outlet></div>
             </div>
