@@ -51,11 +51,9 @@ const Main = () => {
 
     //Mobile
       rootMobile:{
-        display:'flex',
-        flexDirection: 'column',
-        width: '100vw',
-        height: '100vh',
-        overflowY:'hidden',
+        position: 'relative',
+        width: '100%',
+        height: '100%',
       },
       NavbarMobile:{
         display: controlNavbar ? ' ' : 'none',
@@ -65,12 +63,13 @@ const Main = () => {
         zIndex:99,
       },
       mainMobile:{
+        position:'absolute',
+        left:0,
+        right:0,
+        top:0,
+        padding:30,
         display: !controlNavbar ? ' ' : 'none',
-        height: '95%',
-        minHeight: '90%',
-        overflowX:'hidden',
-        overflowY:'scroll',
-        width: '100%'
+        overflow:'hidden',
       },
       menuHamburger:{
         position: 'absolute',
@@ -80,7 +79,7 @@ const Main = () => {
         zIndex:90,
         borderRadius:'50%',
         padding:10,
-        backgroundColor: '#04b4e0'
+        backgroundColor: '#04b4e0',
       }
     });
 

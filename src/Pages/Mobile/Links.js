@@ -10,7 +10,6 @@ const Links = ({props}) => {
     const LinksControl = useRef(null);
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-    console.log(props.setControlNavbar)
     const useStyles = makeStyles({
         root: {
             display: 'flex',

@@ -9,10 +9,8 @@ const Resume = () => {
   const useStyles = makeStyles({
     root:{
       height:'100%',
-      [theme.breakpoints.down('sm')]:{
-       padding:25
-      },
-    },
+      width:'100%',
+     },
     timeline:{
       width:'90%',
     }

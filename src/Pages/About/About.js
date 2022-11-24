@@ -13,9 +13,7 @@ const About = () => {
   const useStyles = makeStyles({
     root:{
       height:'100%',
-      [theme.breakpoints.down('sm')]:{
-       padding:25
-      },
+      width:'100%',
     },
     titles:{
       fontSize:40,
