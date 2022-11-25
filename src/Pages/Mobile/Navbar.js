@@ -27,14 +27,15 @@ const useStyles = makeStyles({
         justifyContent: 'flex-start',
         alignItems: 'center',
         color: 'white',
+        flexWrap: 'nowrap',
         backgroundColor: '#04b4e0',
         float:'right',
         paddingTop:20,
-        animation:`$OpenNavbar 1000ms ${theme.transitions.easing.easeInOut}`
+        animation:`$OpenNavbar 1500ms ${theme.transitions.easing.easeInOut}`
     },
     "@keyframes OpenNavbar": {
       "0%": {
-        width: '80%',
+        width: '0%',
       },
       "100%": {
         width:'100%',
@@ -66,12 +67,14 @@ const useStyles = makeStyles({
         fontWeight:600,
         margin: 0,
         textAlign: 'center',
-        marginTop:20
+        marginTop:20,
+        whiteSpace: 'nowrap',
     },
     role:{
         fontFamily:'Poppins, sans-serif',
         fontSize:'20px',
-        fontWeight:300
+        fontWeight:300,
+        whiteSpace: 'nowrap',
     },
     resume:{
         padding: '0.8em 2.1em',
@@ -85,6 +88,7 @@ const useStyles = makeStyles({
         fontFamily:'Poppins, sans-serif',
         fontWeight:300,
         margin:'20px 0px',
+        whiteSpace: 'nowrap',
         textDecoration:'none',
             "&:hover": {
                 backgroundColor: '#fff',

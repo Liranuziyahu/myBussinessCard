@@ -52,13 +52,13 @@ const Main = () => {
     //Mobile
       rootMobile:{
         position: 'relative',
-        width: '100%',
+        width: '100vw',
         height: '100vh',
       },
       NavbarMobile:{
         display: controlNavbar ? ' ' : 'none',
-        height: '100%',
-        width: '100%',
+        height: '100vh',
+        width: '100vw',
         overflow:'hidden',
         zIndex:99,
       },
