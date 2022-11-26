@@ -67,16 +67,17 @@ const Main = () => {
       mainMobile:{
         position: 'absolute',
         top:0,
-        left:30,
-        right:30,
+        left:0,
+        right:0,
         bottom:0,
-        width: '80vw',
-        height: '90vh',
+        width: '100vw',
+        height: '100vh',
         zIndex:!controlNavbar ? 0 : -1,
         overflowY:'scroll',
       },
       sectionPage:{
-        marginBottom:100,
+        padding:60,
+        marginBottom:100
       },
       menuHamburger:{
         display: !controlNavbar ? 'flex' : 'none',
