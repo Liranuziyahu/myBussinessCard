@@ -13,8 +13,8 @@ const Links = ({props}) => {
     const useStyles = makeStyles({
         root: {
             display: 'flex',
-            width: '50%',
-            height: '50%',
+            width: '80%',
+            height: '35%',
             flexDirection: 'column',
             flexWrap: 'nowrap',
             justifyContent: 'center',

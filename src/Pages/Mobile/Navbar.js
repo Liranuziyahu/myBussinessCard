@@ -98,14 +98,14 @@ const useStyles = makeStyles({
     close:{
         position: 'absolute',
         top:20,
-        left:'90%'
+        left:'85%',
     }
   });
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-        <CloseIcon className={classes.close} onClick={() => props.setControlNavbar(controller => !controller)} />
+        <CloseIcon fontSize='large' className={classes.close} onClick={() => props.setControlNavbar(controller => !controller)} />
         <div className={classes.about}>
         <img className={classes.avatar} src={avatar} alt='Liran emoji'></img>
             <h2 className={classes.name}>Liran Uziyahu</h2>
