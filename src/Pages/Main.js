@@ -1,5 +1,6 @@
-import React , {useState} from 'react'
+import React , {useState , useRef} from 'react'
 import {Outlet} from 'react-router-dom'
+import {Home , About , Portfolio , Resume ,Contact} from './index'
 import Navbar from './Navbar/Navbar'
 import Profile from './Profile/Profile'
 import NavbarMobile from './Mobile/Navbar'
@@ -12,7 +13,7 @@ const Main = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [controlNavbar , setControlNavbar] = useState(false);
-  
+
   const useStyles = makeStyles({
     root:{
       display: 'flex',
@@ -52,24 +53,30 @@ const Main = () => {
     //Mobile
       rootMobile:{
         position: 'relative',
-        width: '100vw',
-        height: '100vh',
+        minWidth: '100vw',
+        minHeight: '100vh',
+        overflow:'hidden',
       },
       NavbarMobile:{
         display: controlNavbar ? ' ' : 'none',
         height: '100vh',
         width: '100vw',
         overflow:'hidden',
-        zIndex:99,
+        zIndex:!controlNavbar ? 99 : -1,
       },
       mainMobile:{
-        position:'absolute',
-        left:0,
-        right:0,
+        position: 'absolute',
         top:0,
-        padding:60,
-        display: !controlNavbar ? ' ' : 'none',
-        overflow:'hidden',
+        left:30,
+        right:30,
+        bottom:0,
+        width: '80vw',
+        height: '90vh',
+        zIndex:!controlNavbar ? 0 : -1,
+        overflowY:'scroll',
+      },
+      sectionPage:{
+        marginBottom:100,
       },
       menuHamburger:{
         display: !controlNavbar ? 'flex' : 'none',
@@ -87,8 +94,9 @@ const Main = () => {
       }
     });
 
-
     const classes = useStyles();
+
+
 
   return (
     <>
@@ -98,8 +106,14 @@ const Main = () => {
             <div className={classes.rootMobile}>
               <div className={classes.menuHamburger} onClick={() => setControlNavbar(true)}>< MenuIcon></MenuIcon></div>
               <div className={classes.NavbarMobile}><NavbarMobile props={{setControlNavbar}}/></div>
-              <div className={classes.mainMobile}><Outlet></Outlet></div>
-            </div>
+              <div className={classes.mainMobile}>
+                <div id='Home' className={classes.sectionPage}><Home/></div>
+                <div id='About' className={classes.sectionPage}><About/></div>
+                <div id='Profolio' className={classes.sectionPage}><Portfolio/></div>
+                <div id='Resume' className={classes.sectionPage}><Resume/></div>
+                <div id='Contact' className={classes.sectionPage}><Contact/></div>
+              </div>
+            </div> 
           </> 
         )
         : //Desktop
