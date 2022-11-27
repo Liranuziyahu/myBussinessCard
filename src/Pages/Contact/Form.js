@@ -53,7 +53,7 @@ const Form = () => {
   const sumbitContact = (e) =>{
   e.preventDefault();
   // const token = captchaRef.current.getValue();
-  if(token)
+  // if(token)
     axios.post(process.env.REACT_APP_API_KEY,{name:e.target[0].value , email:e.target[2].value , phone:e.target[4].value,company:e.target[6].value,massage:e.target[8].value , date:Date()})
       .then((response) => {
           console.log('Contact sent');
@@ -65,8 +65,8 @@ const Form = () => {
           // captchaRef.current.reset();
       })
       .catch(err => console.log(err))
-  else
-    alert('Please declare that you are not a robot')
+  // else
+    // alert('Please declare that you are not a robot')
   }
   return (
           <form onSubmit={(e)=> sumbitContact(e)} >
