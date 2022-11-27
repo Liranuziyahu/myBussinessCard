@@ -52,8 +52,8 @@ const Form = () => {
   const classes = useStyles();
   const sumbitContact = (e) =>{
   e.preventDefault();
-  // const token = captchaRef.current.getValue();
-  // if(token)
+  const token = captchaRef.current.getValue();
+  if(token)
     axios.post(process.env.REACT_APP_API_KEY,{name:e.target[0].value , email:e.target[2].value , phone:e.target[4].value,company:e.target[6].value,massage:e.target[8].value , date:Date()})
       .then((response) => {
           console.log('Contact sent');
@@ -62,11 +62,11 @@ const Form = () => {
           e.target[4].value=''
           e.target[6].value=''
           e.target[8].value=''
-          // captchaRef.current.reset();
+          captchaRef.current.reset();
       })
       .catch(err => console.log(err))
-  // else
-    // alert('Please declare that you are not a robot')
+  else
+    alert('Please declare that you are not a robot')
   }
   return (
           <form onSubmit={(e)=> sumbitContact(e)} >
@@ -87,12 +87,12 @@ const Form = () => {
                 <div className={classes.input}>
                   <TextField  id="outlined-multiline-static" label="Massage" name='massage' multiline rows={2} style={{width:isMobile?'70vw':"29vw"}}/>              
                 </div>
-                {/* <div className={classes.input}>
+                 <div className={classes.input}>
                   <ReCAPTCHA
                     sitekey={process.env.REACT_APP_SITE_KEY}
                     ref={captchaRef}
                     />
-                </div> */}
+                </div>
                
 
                 <button type="submit" className={classes.sendbtn}>Submit</button>
