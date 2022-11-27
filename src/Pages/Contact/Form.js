@@ -52,7 +52,7 @@ const Form = () => {
   const classes = useStyles();
   const sumbitContact = (e) =>{
   e.preventDefault();
-  const token = captchaRef.current.getValue();
+  // const token = captchaRef.current.getValue();
   if(token)
     axios.post(process.env.REACT_APP_API_KEY,{name:e.target[0].value , email:e.target[2].value , phone:e.target[4].value,company:e.target[6].value,massage:e.target[8].value , date:Date()})
       .then((response) => {
@@ -62,7 +62,7 @@ const Form = () => {
           e.target[4].value=''
           e.target[6].value=''
           e.target[8].value=''
-          captchaRef.current.reset();
+          // captchaRef.current.reset();
       })
       .catch(err => console.log(err))
   else
