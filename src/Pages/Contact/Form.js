@@ -52,8 +52,10 @@ const Form = () => {
   const classes = useStyles();
   const sumbitContact = (e) =>{
   e.preventDefault();
-  const token = captchaRef.current.getValue();
-  if(token)
+  const buttonSubmit =  e.target[12]
+  const captchaToken = captchaRef.current.getValue();
+  buttonSubmit.disabled = true
+  if(captchaToken)
     axios.post(process.env.REACT_APP_API_KEY,{name:e.target[0].value , email:e.target[2].value , phone:e.target[4].value,company:e.target[6].value,massage:e.target[8].value , date:Date()})
       .then((response) => {
           console.log('Contact sent');
@@ -63,6 +65,7 @@ const Form = () => {
           e.target[6].value=''
           e.target[8].value=''
           captchaRef.current.reset();
+          buttonSubmit.disabled = false;
       })
       .catch(err => console.log(err))
   else
@@ -93,9 +96,7 @@ const Form = () => {
                     ref={captchaRef}
                     />
                 </div>
-               
-
-                <button type="submit" className={classes.sendbtn}>Submit</button>
+                <button type="submit" className={classes.sendbtn} >Submit</button>
               </div>
             </FormControl>
 
