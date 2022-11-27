@@ -89,7 +89,7 @@ const Form = () => {
                 </div>
                  <div className={classes.input}>
                   <ReCAPTCHA
-                    sitekey={process.env.REACT_APP_SITE_KEY}
+                    sitekey='6Lfz9jkjAAAAAD_mYiztmgE4iaPK3aATzhTUf-Y6'
                     ref={captchaRef}
                     />
                 </div>
