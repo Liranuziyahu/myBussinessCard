@@ -87,12 +87,12 @@ const Form = () => {
                 <div className={classes.input}>
                   <TextField  id="outlined-multiline-static" label="Massage" name='massage' multiline rows={2} style={{width:isMobile?'70vw':"29vw"}}/>              
                 </div>
-                <div className={classes.input}>
+                {/* <div className={classes.input}>
                   <ReCAPTCHA
                     sitekey={process.env.REACT_APP_SITE_KEY}
                     ref={captchaRef}
                     />
-                </div>
+                </div> */}
                
 
                 <button type="submit" className={classes.sendbtn}>Submit</button>
