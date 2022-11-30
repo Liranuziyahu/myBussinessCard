@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef , useState } from 'react';
 import axios from 'axios'
 import { makeStyles } from '@material-ui/core/styles';
 import { FormControl } from '@mui/material';
@@ -12,11 +12,8 @@ const Form = () => {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   const captchaRef = useRef(null)
+  const [textSent , setTextSent] = useState('')
 
-  function onChange(value) {
-    console.log("Captcha value:", value);
-  }
-  
   const useStyles = makeStyles({
     form:{
       display: 'flex',
@@ -47,6 +44,11 @@ const Form = () => {
           "&:hover": {
               color:'#fff'
             }
+    },
+    textSent:{
+      color:'green',
+      fontWeight:'bold',
+      fontSize:'14px'
     }
   })
   const classes = useStyles();
@@ -66,6 +68,7 @@ const Form = () => {
           e.target[8].value=''
           captchaRef.current.reset();
           buttonSubmit.disabled = false;
+          setTextSent('Message sent, thank you for contacting us!')
       })
       .catch(err => console.log(err))
   else
@@ -96,7 +99,8 @@ const Form = () => {
                     ref={captchaRef}
                     />
                 </div>
-                <button type="submit" className={classes.sendbtn} >Submit</button>
+                <button type="submit" className={classes.sendbtn}>Submit</button>
+                <div className={classes.textSent}>{textSent}</div>
               </div>
             </FormControl>
 

@@ -51,19 +51,19 @@ const Details = () => {
         }}>
             <Paper elevation={3} className={classes.paper} >
                 <div className={classes.group}>
-                    <CallIcon fontSize='large'/>
+                    <CallIcon fontSize='large' style={{marginTop:10}}/>
                     <h4>050-364-9949</h4>
                 </div>
             </Paper>
             <Paper className={classes.paper} elevation={3} >
                 <div className={classes.group}>
-                    <AlternateEmailIcon fontSize='large'/>
+                    <AlternateEmailIcon fontSize='large' style={{marginTop:10}}/>
                     <h4>Liranuzistud@gmail.com</h4>
                 </div>
             </Paper> 
             <Paper className={classes.paper} elevation={3} >
                 <div className={classes.group}>
-                    <RoomIcon fontSize='large'/>
+                    <RoomIcon fontSize='large' style={{marginTop:10}}/>
                     <h4>Center</h4>
                 </div>
             </Paper>
