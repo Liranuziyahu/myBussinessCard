@@ -76,7 +76,7 @@ const Main = () => {
         overflowY:'scroll',
       },
       sectionPage:{
-        padding:60,
+        padding:35,
       },
       menuHamburger:{
         display: !controlNavbar ? 'flex' : 'none',

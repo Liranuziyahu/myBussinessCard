@@ -9,11 +9,36 @@ import TimelineOppositeContent, {
 timelineOppositeContentClasses,
 } from '@mui/lab/TimelineOppositeContent';
 import { makeStyles } from '@material-ui/core/styles';
+import { useTheme } from '@mui/material/styles';
 
 const MyTimeline = ({props}) => {
+  const theme = useTheme() 
+  const useStyles = makeStyles({
+    root:{
+      width:'100%',
+      [theme.breakpoints.down('sm')]:{
+        width:'100vw',
+      }
+    },
+    text:{
+      display:'flex',
+      width:'100%',
+      flexDirection:'column',
+      alignItems: 'stretch',
+      alignContent: 'space-around',
+      flexWrap:'wrap',
+      fontFamily:'Poppins, sans-serif',
+      lineHeight: '1.65em',
+      fontWeight:300,
+      color:'#555',
+    },
+    date:{
+      whiteSpace:'nowrap',
+    }
+  })
   const classes = useStyles()
   return (
-    <div>
+    <div className={classes.root}>
       {
         props.value === 'Education' ? 
      
@@ -27,7 +52,7 @@ const MyTimeline = ({props}) => {
           <TimelineItem>
           <TimelineOppositeContent color="textSecondary" >
               <div className={classes.date}>
-                  2021-2022
+                  2022-2022
               </div>
               <div>
                   INT
@@ -59,7 +84,7 @@ const MyTimeline = ({props}) => {
         <TimelineItem>
         <TimelineOppositeContent color="textSecondary">
             <div className={classes.date}>
-                  2021-2022
+                  2022 - 2022
             </div>
             <div>
                 Teleclal
@@ -81,7 +106,7 @@ const MyTimeline = ({props}) => {
       <TimelineItem>
         <TimelineOppositeContent color="textSecondary">
             <div className={classes.date}>
-                  2021-2022
+                  2021 - 2022
             </div>
             <div>
                 Teleclal
@@ -104,7 +129,7 @@ const MyTimeline = ({props}) => {
       <TimelineItem>
         <TimelineOppositeContent color="textSecondary">
             <div className={classes.date}>
-                  2020-2021
+                  2020 - 2021
             </div>
             <div>
                 Teleclal
@@ -130,21 +155,3 @@ const MyTimeline = ({props}) => {
 
 export default MyTimeline
 
-const useStyles = makeStyles({
-  text:{
-    display:'flex',
-    width:'100%',
-    flexDirection:'column',
-    alignItems: 'stretch',
-    alignContent: 'space-around',
-    flexWrap:'wrap',
-    fontFamily:'Poppins, sans-serif',
-    lineHeight: '1.65em',
-    fontWeight:300,
-    color:'#555',
-  },
-  date:{
-    width:'80px',
-    float:'right'
-  }
-})

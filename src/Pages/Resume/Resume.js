@@ -12,7 +12,10 @@ const Resume = () => {
       width:'100%',
      },
     timeline:{
-      width:'90%',
+      width:'100%',
+      [theme.breakpoints.down('sm')]:{
+        marginLeft:-35
+      }
     }
   })
   const classes = useStyles()
