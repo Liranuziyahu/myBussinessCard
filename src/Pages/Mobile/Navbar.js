@@ -31,7 +31,7 @@ const useStyles = makeStyles({
         backgroundColor: '#04b4e0',
         float:'right',
         paddingTop:20,
-        animation:`$OpenNavbar 1500ms ${theme.transitions.easing.easeInOut}`
+        animation:`$OpenNavbar 900ms ${theme.transitions.easing.easeInOut}`
     },
     "@keyframes OpenNavbar": {
       "0%": {
@@ -50,6 +50,7 @@ const useStyles = makeStyles({
     },
     about:{
         display:'flex',
+        height:'100%',
         width:'100%',
         flexDirection: 'column',
         alignItems: 'center',

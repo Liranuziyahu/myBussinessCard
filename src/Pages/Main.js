@@ -77,7 +77,6 @@ const Main = () => {
       },
       sectionPage:{
         padding:60,
-        marginBottom:100
       },
       menuHamburger:{
         display: !controlNavbar ? 'flex' : 'none',
