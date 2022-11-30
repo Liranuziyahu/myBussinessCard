@@ -8,7 +8,7 @@ const Resume = () => {
   const theme = useTheme() 
   const useStyles = makeStyles({
     root:{
-      height:'100%',
+      height:'95%',
       width:'100%',
      },
     timeline:{

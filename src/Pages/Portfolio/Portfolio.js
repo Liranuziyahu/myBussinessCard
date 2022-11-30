@@ -21,7 +21,7 @@ const Portfolio = () => {
       width:'100%',
       height:'100%',
      },
-     gropSection:{
+     groupSection:{
       display:'flex',
       justifyContent: 'space-around',
       flexWrap: 'wrap'
@@ -33,7 +33,7 @@ const Portfolio = () => {
   return (
     <div className={classes.root}>
       <h2>Portfolio</h2>
-     <div className={classes.gropSection}>
+     <div className={classes.groupSection}>
      <Card sx={{ maxWidth: 345 , marginBottom:isMobile? 5 :0 }}>
       <CardActionArea>
         <CardMedia
@@ -87,7 +87,7 @@ const Portfolio = () => {
             Memory Game
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            A web memory game with a beautiful interface, I opened developered with another friend at the beginning of the course         
+            A web memory game with a beautiful interface, I developered with another friend at the beginning of the course         
           </Typography>
           <h3>
           Technologies:
