@@ -1,6 +1,7 @@
-import React , {useEffect, useState} from 'react'
+import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -14,6 +15,7 @@ import MemoryGame1 from '../../imgs/MemoryGame_1.png';
 
 const Portfolio = () => {
   const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const useStyles = makeStyles({
     root:{
       width:'100%',
@@ -22,15 +24,17 @@ const Portfolio = () => {
      gropSection:{
       display:'flex',
       justifyContent: 'space-around',
-      flexWrap: 'nowrap'
+      flexWrap: 'wrap'
      }
   })
   const classes = useStyles()
 
+
   return (
     <div className={classes.root}>
+      <h2>Portfolio</h2>
      <div className={classes.gropSection}>
-     <Card sx={{ maxWidth: 345 }}>
+     <Card sx={{ maxWidth: 345 , marginBottom:isMobile? 5 :0 }}>
       <CardActionArea>
         <CardMedia
           component="img"
