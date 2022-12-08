@@ -107,10 +107,9 @@ const Main = () => {
               <div className={classes.menuHamburger} onClick={() => setControlNavbar(true)}>< MenuIcon></MenuIcon></div>
               <div className={classes.NavbarMobile}><NavbarMobile props={{setControlNavbar}}/></div>
               <div className={classes.mainMobile}>
-                <div id='Home' className={classes.sectionPage}><Home/></div>
                 <div id='About' className={classes.sectionPage}><About/></div>
-                <div id='Profolio' className={classes.sectionPage}><Portfolio/></div>
                 <div id='Resume' className={classes.sectionPage}><Resume/></div>
+                <div id='Profolio' className={classes.sectionPage}><Portfolio/></div>
                 <div id='Contact' className={classes.sectionPage}><Contact/></div>
               </div>
             </div> 

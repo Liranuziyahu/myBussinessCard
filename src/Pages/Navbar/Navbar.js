@@ -1,15 +1,33 @@
-import React , {useRef} from 'react'
+import React , {useEffect, useRef} from 'react'
 import {Link} from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import RoofingIcon from '@mui/icons-material/Roofing';
+import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import AssignmentIndTwoToneIcon from '@mui/icons-material/AssignmentIndTwoTone';
+import ContactMailIcon from '@mui/icons-material/ContactMail';
 import '../../CSS/fonts.css';
 
 
 const NavBar = () => {
     const LinksControl = useRef(null);
+    useEffect(()=>{
+        if(LinksControl.current!=null)
+            switch(window.location.pathname)
+            {
+                case '/Resume':
+                    focuseLink(1)
+                    break;
+                case '/Portfolio':
+                    focuseLink(2)
+                    break;
+                case '/Contact':
+                    focuseLink(3)
+                    break;
+                default:   
+                focuseLink(0)       
+            }
+    },[LinksControl.current])
 
     const useStyles = makeStyles({
         root: {
@@ -66,25 +84,21 @@ const NavBar = () => {
 
   return (
     <div className={classes.root} ref={LinksControl}>
-        <Link className={classes.button} to='/' style={{textDecoration: 'none',backgroundColor:'rgba(22, 32, 10, 0.07)' }} onClick={() => focuseLink(0)}>
-                <RoofingIcon className={classes.icons} fontSize='large'style={{color:'#04b4e0'}} display='none'/>
-                <span className={classes.spans} style={{fontWeight:'600'}}>Home</span>
-        </Link>
-        <Link className={classes.button} to='/about' style={{textDecoration: 'none'}} onClick={() => focuseLink(1)}>
-                <PersonOutlineIcon className={classes.icons} fontSize='large'/>
+        <Link className={classes.button} to='/' style={{textDecoration: 'none'}} onClick={() => focuseLink(0)}>
+                <PersonOutlineIcon className={classes.icons} fontSize='large'style={{color:'#04b4e0'}} display='none'/>
                 <span className={classes.spans}>About</span>
         </Link>
-        <Link className={classes.button} to='/Resume' style={{textDecoration: 'none'}} onClick={() => focuseLink(2)}>
+        <Link className={classes.button} to='/Resume' style={{textDecoration: 'none'}} onClick={() => focuseLink(1)}>
                 <AssignmentIndTwoToneIcon className={classes.icons} fontSize='large'/>
                 <span className={classes.spans}>Resume</span>
         </Link>
-        <Link className={classes.button} to='/Contact' style={{textDecoration: 'none'}} onClick={() => focuseLink(3)}>
-                <MailOutlineIcon className={classes.icons} fontSize='large'/>
-                <span className={classes.spans}>Contact</span>
-        </Link>
-        <Link className={classes.button} to='/Portfolio' style={{textDecoration: 'none'}} onClick={() => focuseLink(4)}>
-                <MailOutlineIcon className={classes.icons} fontSize='large'/>
+        <Link className={classes.button} to='/Portfolio' style={{textDecoration: 'none'}} onClick={() => focuseLink(2)}>
+                <IntegrationInstructionsIcon className={classes.icons} fontSize='large'/>
                 <span className={classes.spans}>Portfolio</span>
+        </Link>
+        <Link className={classes.button} to='/Contact' style={{textDecoration: 'none'}} onClick={() => focuseLink(3)}>
+                <ContactMailIcon className={classes.icons} fontSize='large'/>
+                <span className={classes.spans}>Contact</span>
         </Link>
     </div>
   )

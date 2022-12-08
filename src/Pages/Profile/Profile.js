@@ -69,7 +69,9 @@ const useStyles = makeStyles({
         textDecoration:'none',
             "&:hover": {
                 backgroundColor: '#fff',
-                color:'#04b4e0'
+                color:'#04b4e0',
+                transform: 'scale(1.2)'
+
               }
     }
   });

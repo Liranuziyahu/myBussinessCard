@@ -85,53 +85,64 @@ const About = () => {
 
   return (
     <div className={classes.root}>
-      <h2 
-        className={classes.titles}>About<span className={classes.span}> Me</span>
-      </h2>
+      <h2 className={classes.titles}>About<span className={classes.span}> Me</span></h2>
       <section className={classes.section}>
         <div className={classes.textDecoration + ' ' + classes.textColor}>
-        Proin volutpat mauris ac pellentesque pharetra. Suspendisse congue elit vel odio suscipit, sit amet tempor nisl imperdiet. Quisque ex justo, faucibus ut mi in, condimentum finibus dolor. Aliquam vitae hendrerit dolor, eget imperdiet mauris. Maecenas et ante id ipsum condimentum dictum et vel massa. Ut in imperdiet dolor, vel consectetur dui.
+          <div>
+              "Your smile is contagious – when you walk with a smile, you can make others smile too."
+          </div>
+          <div>
+              I always carry this perspective, even now you are reading that with a smile 😃
+          </div>
+          <div>
+              Hi everyone, my name is Liran and I'm a full-stack developer.
+              My love for gaming started at a very young age, and as a result, my desire to learn and create grew within me.
+              Already in high school, I chose to follow my heart and study computer science, and now, thankfully, I am after a full-stack course.
+              Today I work as an IT professional and previously worked as a project manager in the technology field.
+          </div>
+          <div>
+              Currently, <span className={classes.span}>I am looking for my next challenge</span> in the world of programming, my focus on the realm of the web.
+              And today I am focusing on the following technologies: <div className={classes.span}>React.js , Vanilla JavaScript , Node.js , Express.js , MySQL</div> 
+          </div>
+       
+       
         </div>
         <div className={classes.textDecoration} style={{width:"40%"}}>
-          <div className={classes.marginBottom}>
-            <span className={classes.span}>Age </span> <span> 25</span>
-          </div>
-          <div className={classes.marginBottom}>
-            <span className={classes.span}>Residence  </span> <span> Tel-Aviv</span>
-          </div>
           <div className={classes.marginBottom}>
             <span className={classes.span}>e-mail </span> <span> Liranuzistud@gmail.com</span>
           </div>
           <div className={classes.marginBottom}>
             <span className={classes.span}>Phone  </span> <span> 050-364-9949</span>
           </div>
+          <div className={classes.marginBottom}>
+            <span className={classes.span}>Residence  </span> <span> Tel-Aviv</span>
+          </div>
+          <div className={classes.marginBottom}>
+            <span className={classes.span}>Age </span> <span> 25</span>
+          </div>
         </div>
       </section>
-      <div className={classes.titles}>
-        <h4>What<span className={classes.span}> I Do</span>
-        </h4>
-      </div>
-        
+        <h2 className={classes.titles}>What<span className={classes.span}> I Do</span></h2>
       <section className={classes.section}>
         <div className={classes.cards}>
           <WebIcon fontSize='large'/>
-          <div className={classes.subtitle}>Webs</div>
-          <div className={classes.textColor}>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales.</div>
+          <div className={classes.subtitle}>Website</div>
+          <div className={classes.textColor}>Building a website , can be used to promote the business and showcase your products to the public. In addition, a website can improve the credibility and trustworthiness of the business in the eyes of customers and internet users.</div>
+        </div>
+        <div className={classes.cards}>
+          <CloudSyncIcon fontSize='large'/>
+          <div className={classes.subtitle}>Landing page</div>
+          <div className={classes.textColor}>Building a landing page is for a standalone web page, created specifically for the purpose of a marketing or advertising campaign. It is designed to direct the visitor to take a specific action, such as making a purchase or filling out a form to receive more information.</div>
         </div>
         <div className={classes.cards}>
           <WysiwygIcon fontSize='large'/>
           <div className={classes.subtitle}>Webs systems</div>
-          <div className={classes.textColor}>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales.</div>
+          <div className={classes.textColor}>Building a system that is tailored to the customer, includes users, few dashboards, data display, and data analysis.</div>
         </div>
         <div className={classes.cards}>
           <StorageIcon fontSize='large'/>
-          <div className={classes.subtitle}>Ecommerce</div>
-          <div className={classes.textColor}>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales.</div>
-        </div>
-        <div className={classes.cards}>
-          <CloudSyncIcon fontSize='large'/>
-          <div className={classes.subtitle}>Ecommerce</div>
-          <div className={classes.textColor}>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non sodales.</div>
+          <div className={classes.subtitle}>Games</div>
+          <div className={classes.textColor}>building simple games that include a leaderboard, login, and more.</div>
         </div>
         </section>  
      </div>

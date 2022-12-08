@@ -11,11 +11,14 @@ const Contact = () => {
           height:'100%',
           width:'100%',
          },
-        title:{
-          fontFamily:'Roboto, sans-serif',
-          fontWeight:600,
+         titles:{
           fontSize:40,
-          marginBottom:15
+          fontFamily:'Poppins, sans-serif',
+          fontWeight:500,
+        }, 
+        span:{
+          color:'#04b4e0',
+          fontWeight:600,
         },
         groupSection:{
           display:'flex',
@@ -33,7 +36,8 @@ const Contact = () => {
     const classes = useStyles();
   return (
     <div className={classes.root}>
-        <div className={classes.title}>Contact</div>
+        <div className={classes.titles}>Contact <span className={classes.span}> Me</span></div> 
+        
         <div className={classes.groupSection}>
           <Form/>
           <Details/>

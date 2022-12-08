@@ -69,7 +69,7 @@ const Form = () => {
           e.target[8].value=''
           captchaRef.current.reset();
           buttonSubmit.disabled = false;
-          setTextSent('Message sent, thank you for contacting us!')
+          setTextSent('Message sent, thank you for contacting me!')
       })
       .catch(err => console.log(err))
   else

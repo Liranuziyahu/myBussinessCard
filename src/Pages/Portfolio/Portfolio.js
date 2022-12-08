@@ -25,14 +25,23 @@ const Portfolio = () => {
       display:'flex',
       justifyContent: 'space-around',
       flexWrap: 'wrap'
-     }
+     },
+     titles:{
+      fontSize:40,
+      fontFamily:'Poppins, sans-serif',
+      fontWeight:500,
+    }, 
+    span:{
+      color:'#04b4e0',
+      fontWeight:600,
+    },
   })
   const classes = useStyles()
 
 
   return (
     <div className={classes.root}>
-      <h2>Portfolio</h2>
+      <h2 className={classes.titles}>My <span className={classes.span}> Portfolio </span></h2> 
      <div className={classes.groupSection}>
      <Card sx={{ maxWidth: 345 , marginBottom:isMobile? 5 :0 }}>
       <CardActionArea>
