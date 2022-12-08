@@ -70,13 +70,14 @@ const Main = () => {
         left:0,
         right:0,
         bottom:0,
-        width: '100vw',
-        height: '100vh',
+        // width: '100vw',
+        // height: '100vh',
         zIndex:!controlNavbar ? 0 : -1,
         overflowY:'scroll',
       },
       sectionPage:{
         padding:35,
+        overflow:'hidden',
       },
       menuHamburger:{
         display: !controlNavbar ? 'flex' : 'none',
