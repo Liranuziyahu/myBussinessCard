@@ -24,7 +24,7 @@ const Popup = ({props}) => {
         section:{
             position: 'relative',
             width: '500px',
-            height: isMobile?'60vh':'500px',
+            height: isMobile?'70vh':'500px',
             backgroundColor: '#04b4e0',
             borderRadius:   isMobile?'30px 30px 0px 0px' :'30px',
             display:'flex',
