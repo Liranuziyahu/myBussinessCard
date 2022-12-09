@@ -43,7 +43,7 @@ const Portfolio = () => {
     <div className={classes.root}>
       <h2 className={classes.titles}>My <span className={classes.span}> Portfolio </span></h2> 
      <div className={classes.groupSection}>
-     <Card sx={{ maxWidth: 345 , marginBottom:isMobile? 5 :0 }}>
+     <Card sx={{ maxWidth: 320 , marginBottom:isMobile? 5 :0 }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -84,7 +84,7 @@ const Portfolio = () => {
       </CardActionArea>
     </Card>
 
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 320 }}>
       <CardActionArea>
         <CardMedia
           component="img"

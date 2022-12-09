@@ -20,7 +20,7 @@ const Main = () => {
       overflow:'hidden',
     },
     navbar: {
-          position: 'sticky',
+          position: 'fixed',
           top:'0',
           left:'0',
           bottom:'0',
@@ -28,7 +28,7 @@ const Main = () => {
           height: '100vh',
       },
       profile:{
-          position: 'sticky',
+          position: 'fixed',
           display:'inline-block',
           top:'0',
           left:'10vw',
@@ -41,13 +41,9 @@ const Main = () => {
         position: 'absolute',
         top:'0',
         left:'40vw',
-        width: '58vw',
-        maxHeight: '120vh',
-        height: '95vh',
-        marginLeft: '20px',
-        marginBottom: '20px',
-        overflowY:'scroll',
-        margin:20
+        width: 'auto',
+        minWidth: '54vw',
+        padding:20,
       },
 
     //Mobile
