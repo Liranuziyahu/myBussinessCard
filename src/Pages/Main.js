@@ -106,7 +106,7 @@ const classes = useStyles();
 useEffect(()=>{
   setTimeout(()=>{
     setPopup(!popup)
-  },1000 * 40)  
+  },1000)  
 },[])
 
   return (
@@ -115,10 +115,10 @@ useEffect(()=>{
         isMobile ? (
           <>
             <div className={classes.rootMobile}>
+              <div className={classes.popup}><Popup props={{setPopup}}></Popup></div>
               <div className={classes.menuHamburger} onClick={() => setControlNavbar(true)}>< MenuIcon></MenuIcon></div>
               <div className={classes.NavbarMobile}><NavbarMobile props={{setControlNavbar}}/></div>
               <div className={classes.mainMobile}>
-              <div className={classes.popup}><Popup props={{setPopup}}></Popup></div>
                 <div id='About' className={classes.sectionPage}><About/></div>
                 <div id='Resume' className={classes.sectionPage}><Resume/></div>
                 <div id='Profolio' className={classes.sectionPage}><Portfolio/></div>
