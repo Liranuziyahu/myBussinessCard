@@ -106,7 +106,7 @@ const classes = useStyles();
 useEffect(()=>{
   setTimeout(()=>{
     setPopup(!popup)
-  },1000 * 60)  
+  },1000 * 40)  
 },[])
 
   return (
