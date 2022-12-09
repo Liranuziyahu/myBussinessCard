@@ -11,23 +11,6 @@ import '../../CSS/fonts.css';
 
 const NavBar = () => {
     const LinksControl = useRef(null);
-    useEffect(()=>{
-        if(LinksControl.current!=null)
-            switch(window.location.pathname)
-            {
-                case '/Resume':
-                    focuseLink(1)
-                    break;
-                case '/Portfolio':
-                    focuseLink(2)
-                    break;
-                case '/Contact':
-                    focuseLink(3)
-                    break;
-                default:   
-                focuseLink(0)       
-            }
-    },[LinksControl.current])
 
     const useStyles = makeStyles({
         root: {
@@ -80,7 +63,24 @@ const NavBar = () => {
             }
         })
      }
-  
+     
+     useEffect(()=>{
+        if(LinksControl.current!=null)
+            switch(window.location.pathname)
+            {
+                case '/Resume':
+                    focuseLink(1)
+                    break;
+                case '/Portfolio':
+                    focuseLink(2)
+                    break;
+                case '/Contact':
+                    focuseLink(3)
+                    break;
+                default:   
+                focuseLink(0)       
+            }
+    },[LinksControl.current])
 
   return (
     <div className={classes.root} ref={LinksControl}>

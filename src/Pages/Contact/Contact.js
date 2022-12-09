@@ -8,8 +8,11 @@ const Contact = () => {
     const theme = useTheme()
     const useStyles = makeStyles({
       root:{
-          height:'100%',
+          height:'90vh',
           width:'100%',
+          [theme.breakpoints.down('sm')]:{
+            height:'100%',
+          }
          },
          titles:{
           fontSize:40,

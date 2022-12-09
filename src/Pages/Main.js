@@ -1,6 +1,6 @@
-import React , {useState , useRef} from 'react'
+import React , {useState ,useEffect} from 'react'
 import {Outlet} from 'react-router-dom'
-import {Home , About , Portfolio , Resume ,Contact} from './index'
+import {About , Portfolio , Resume ,Contact , Popup} from './index'
 import Navbar from './Navbar/Navbar'
 import Profile from './Profile/Profile'
 import NavbarMobile from './Mobile/Navbar'
@@ -13,6 +13,7 @@ const Main = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [controlNavbar , setControlNavbar] = useState(false);
+  const [popup , setPopup] = useState(false);
 
   const useStyles = makeStyles({
     root:{
@@ -45,11 +46,21 @@ const Main = () => {
         minWidth: '54vw',
         padding:20,
       },
+      popup:{
+        backgroundColor:' rgba(0, 0, 0, 0.6)',
+        position: 'fixed',
+        top:0,
+        bottom:0,
+        right:0,
+        left:0,
+        zIndex:99999999,
+        display:popup ? '':'none',
+      },
 
     //Mobile
       rootMobile:{
         position: 'relative',
-        minWidth: '100vw',
+        width: '100vw',
         minHeight: '100vh',
         overflow:'hidden',
       },
@@ -91,9 +102,12 @@ const Main = () => {
       }
     });
 
-    const classes = useStyles();
-
-
+const classes = useStyles();
+useEffect(()=>{
+  setTimeout(()=>{
+    setPopup(!popup)
+  },1000)  
+},[])
 
   return (
     <>
@@ -104,6 +118,7 @@ const Main = () => {
               <div className={classes.menuHamburger} onClick={() => setControlNavbar(true)}>< MenuIcon></MenuIcon></div>
               <div className={classes.NavbarMobile}><NavbarMobile props={{setControlNavbar}}/></div>
               <div className={classes.mainMobile}>
+              <div className={classes.popup}><Popup props={{setPopup}}></Popup></div>
                 <div id='About' className={classes.sectionPage}><About/></div>
                 <div id='Resume' className={classes.sectionPage}><Resume/></div>
                 <div id='Profolio' className={classes.sectionPage}><Portfolio/></div>
@@ -118,6 +133,7 @@ const Main = () => {
             <div className={classes.navbar}><Navbar></Navbar></div>
             <div className={classes.profile}><Profile/></div>
             <div className={classes.main}><Outlet></Outlet></div>
+            <div className={classes.popup}><Popup props={{setPopup}}></Popup></div>
           </div>
         )
       }
