@@ -57,9 +57,10 @@ const Form = () => {
   e.preventDefault();
   const buttonSubmit =  e.target[12]
   const captchaToken = captchaRef.current.getValue();
-  buttonSubmit.disabled = true
   if(captchaToken)
-    axios.post(process.env.REACT_APP_API_KEY,{name:e.target[0].value , email:e.target[2].value , phone:e.target[4].value,company:e.target[6].value,massage:e.target[8].value , date:Date()})
+    {
+      buttonSubmit.disabled = true
+      axios.post(process.env.REACT_APP_API_KEY,{name:e.target[0].value , email:e.target[2].value , phone:e.target[4].value,company:e.target[6].value,massage:e.target[8].value , date:Date()})
       .then((response) => {
           console.log('Contact sent');
           e.target[0].value=''
@@ -72,6 +73,7 @@ const Form = () => {
           setTextSent('Message sent, thank you for contacting me!')
       })
       .catch(err => console.log(err))
+    }
   else
     alert('Please declare that you are not a robot')
   }
