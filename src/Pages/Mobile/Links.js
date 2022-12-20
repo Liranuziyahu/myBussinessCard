@@ -63,9 +63,6 @@ const Links = ({props}) => {
       )
   return (
     <div className={classes.root} ref={LinksControl}>
-        <div className={classes.button} style={{textDecoration: 'none',backgroundColor:'rgba(22, 32, 10, 0.07)' }} onClick={() => {focuseLink(0); Navigation('Home'); props.setControlNavbar(false); }}>
-                <span className={classes.spans} style={{fontWeight:'600'}} >Home</span>
-        </div>
         <div className={classes.button} style={{textDecoration: 'none'}} onClick={() => {focuseLink(1); Navigation('About'); props.setControlNavbar(false);}}>
                 <span className={classes.spans}>About</span>
         </div>
