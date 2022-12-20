@@ -63,16 +63,16 @@ const Links = ({props}) => {
       )
   return (
     <div className={classes.root} ref={LinksControl}>
-        <div className={classes.button} style={{textDecoration: 'none'}} onClick={() => {focuseLink(1); Navigation('About'); props.setControlNavbar(false);}}>
+        <div className={classes.button} style={{textDecoration: 'none'}} onClick={() => {focuseLink(0); Navigation('About'); props.setControlNavbar(false);}}>
                 <span className={classes.spans}>About</span>
         </div>
-        <div className={classes.button} style={{textDecoration: 'none'}} onClick={() => {focuseLink(2); Navigation('Resume'); props.setControlNavbar(false);}}>
+        <div className={classes.button} style={{textDecoration: 'none'}} onClick={() => {focuseLink(1); Navigation('Resume'); props.setControlNavbar(false);}}>
                 <span className={classes.spans}>Resume</span>
         </div>
-        <div className={classes.button}  style={{textDecoration: 'none'}} onClick={() => {focuseLink(3); Navigation('Contact'); props.setControlNavbar(false); }}>
+        <div className={classes.button}  style={{textDecoration: 'none'}} onClick={() => {focuseLink(2); Navigation('Contact'); props.setControlNavbar(false); }}>
                 <span className={classes.spans}>Contact</span>
         </div>
-        <div className={classes.button}  style={{textDecoration: 'none'}} onClick={() => {focuseLink(4); Navigation('Profolio'); props.setControlNavbar(false); }}>
+        <div className={classes.button}  style={{textDecoration: 'none'}} onClick={() => {focuseLink(3); Navigation('Profolio'); props.setControlNavbar(false); }}>
                 <span className={classes.spans}>Portfolio</span>
         </div>
     </div>
