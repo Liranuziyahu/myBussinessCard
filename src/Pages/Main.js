@@ -44,7 +44,7 @@ const Main = () => {
         left:'40vw',
         width: 'auto',
         minWidth: '54vw',
-        padding:20,
+        padding:15,
       },
       popup:{
         backgroundColor:' rgba(0, 0, 0, 0.6)',

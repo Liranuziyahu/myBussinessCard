@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import avatar from '../../imgs/avatar.jpg';
-import CvResume from './../../files/Liran Uziyahu Developer.pdf'
+import CvResume from './../../files/Liran Uziyahu.pdf'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
@@ -36,21 +36,20 @@ const useStyles = makeStyles({
         marginTop:'-45px'
     },
     avatar:{
-        width: '200px',
-        height:'200px',
+        width: '176px',
+        height:'176px',
         borderRadius:'50%',
         border: '3px solid #fff',
     },
     name:{
-        fontSize:'36px',
+        fontSize:'28px',
         fontFamily:'Poppins, sans-serif',
         lineHeight:'1em',
-        fontWeight:600,
+        fontWeight:500,
         margin: 0,
     },
     role:{
         fontFamily:'Poppins, sans-serif',
-        fontSize:'20px',
         fontWeight:300
     },
     resume:{

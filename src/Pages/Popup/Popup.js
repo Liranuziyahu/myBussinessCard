@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import CloseIcon from '@mui/icons-material/Close';
-import CvResume from './../../files/Liran Uziyahu Developer.pdf'
+import CvResume from './../../files/Liran Uziyahu.pdf'
 import avatar from '../../imgs/avater3.jpg'
 import '../../CSS/fonts.css'
 import {Link} from 'react-router-dom'

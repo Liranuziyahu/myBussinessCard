@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import avatar from '../../imgs/avatar.jpg';
-import CvResume from './../../files/Liran Uziyahu Developer.pdf'
+import CvResume from './../../files/Liran Uziyahu.pdf'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';

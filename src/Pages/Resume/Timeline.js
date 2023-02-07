@@ -10,6 +10,7 @@ timelineOppositeContentClasses,
 } from '@mui/lab/TimelineOppositeContent';
 import { makeStyles } from '@material-ui/core/styles';
 import { useTheme } from '@mui/material/styles';
+import CircleIcon from '@mui/icons-material/Circle';
 
 const MyTimeline = ({props}) => {
   const theme = useTheme() 
@@ -23,10 +24,9 @@ const MyTimeline = ({props}) => {
     text:{
       display:'flex',
       width:'100%',
-      flexDirection:'column',
-      alignItems: 'stretch',
-      alignContent: 'space-around',
+      flexDirection:'row',
       flexWrap:'wrap',
+      fontSize:'14px',
       fontFamily:'Poppins, sans-serif',
       lineHeight: '1.65em',
       fontWeight:300,
@@ -37,10 +37,17 @@ const MyTimeline = ({props}) => {
     },
     subtitle:{
       fontFamily: 'Noto Serif Oriya , serif',
-      fontFamily: 'Source Sans Pro , sans-serif',
-      fontSize:20,
+      fontSize:18,
       display: 'flex',
     },
+    pointerEvents:{
+      color: 'black',
+      width:'7px !important' ,
+      justifyContent:'center !important',
+      fontSize:'10px !important',
+      margin:'0px 7px 0px 7px !important',
+
+     }
   })
   const classes = useStyles()
   return (
@@ -71,7 +78,7 @@ const MyTimeline = ({props}) => {
             <div className={classes.subtitle}>Full Stack Developer</div>
                 <div className={classes.text}>
                 Full stack developers course are web developers who are proficient in both the front-end (client-side) and back-end (server-side) aspects of web development. 
-                A full stack developer course typically covers a wide range of topics, including HTML, CSS, JavaScript, databases, server-side languages, and web development frameworks.
+                A full stack developer course typically covers a wide range of topics, including HTML, CSS, JavaScript, databases, nodeJS, and web development frameworks.
               </div>
             </TimelineContent>
           </TimelineItem>
@@ -90,10 +97,9 @@ const MyTimeline = ({props}) => {
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent>
-            <div className={classes.subtitle}>Computer science (11 units)</div>
+            <div className={classes.subtitle}>Computer science</div>
                 <div className={classes.text}>
-                  Computer science courses at the high school level introduce students to the basics of computer programming, algorithm design, and problem-solving. These courses typically cover fundamental concepts in computer science, such as data structures, control structures, and computer architecture. 
-                  And so began my love and desire to develop in the field of development.
+                Computer science courses at the high school level introduce students to the basics of computer programming, algorithm design, and problem-solving. These courses typically cover fundamental concepts in computer science, such as data structures, control structures, and code. 
                 </div>
             </TimelineContent>
           </TimelineItem>
@@ -101,71 +107,88 @@ const MyTimeline = ({props}) => {
         :  props.value === 'Experience' ?
         ( 
           <>
-              <a href='https://www.teleclal.co.il/' target="_blank" style={{fontSize:22,justifyContent: 'center'}} className={classes.subtitle}>Teleclal Business Group</a>
-              <Timeline
-                sx={{
-                  [`& .${timelineOppositeContentClasses.root}`]: {
-                    flex: 0.2,
-                  },
-                }}
-              >
+              <Timeline sx={{[`& .${timelineOppositeContentClasses.root}`]: {flex: 0.2,},}}>
+                <a href='https://www.noviopus.com/' target="_blank" style={{fontSize:22,justifyContent: 'center',width:'100%'}} className={classes.subtitle}>Noviopus</a>
                 <TimelineItem>
-                <TimelineOppositeContent color="textSecondary">
-                    <div className={classes.date}>
-                          2022 - 2022
-                    </div>
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent>
-                <div className={classes.subtitle}>IT</div>
-                    <div className={classes.text}>
-                    After I was a project manager in technology , I really wanted to learn the  computers and networks confines. And today I work as an IT professional in a company, responsible for all computers and users of the company and also dealing with and learning the field of networks. 
-                    </div>
-                </TimelineContent>
-              </TimelineItem>
-
-              <TimelineItem>
-                <TimelineOppositeContent color="textSecondary">
-                    <div className={classes.date}>
-                      2021 - 2022
-                    </div>
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent>
-                    <div className={classes.subtitle}>PROJECT MANEGER - TECHNOLOGY</div>
-                    <div className={classes.text}>
-                    As a project manager, I need to work in an organized manner to ensure that all projects are carried out in a special and professional way. As a project manager, I need to act as a liaison between multiple teams and departments to ensure that all parts work together to complete the projects on time and with quality.
-                    As part of my role, I am responsible for the centrality of the company, setting up centers, and building management systems by VTIGER 7.
-                    </div>
-                </TimelineContent>
-              </TimelineItem>
-
-              <TimelineItem>
-                <TimelineOppositeContent color="textSecondary">
-                    <div className={classes.date}>
-                          2020 - 2021
-                    </div>
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent>
-                <div className={classes.subtitle}>Unlimited - salesman</div>
-                    <div className={classes.text}>
-                      I started working as a sales representative and was required to meet the company's targets. 
-                      After some time working at the company, the company decided to introduce a system called Salesforce, and I was tasked with implementing the new system for our work needs.
-                      As a result, I was promoted to a project management role at the company.
-                    </div>
-                </TimelineContent>
-              </TimelineItem>
-            </Timeline>
+                  <TimelineOppositeContent color="textSecondary">
+                      <div className={classes.date} style={{color:'#1c1c1c' ,fontWeight:'600'}}>
+                            present
+                      </div>
+                  </TimelineOppositeContent>
+                  <TimelineSeparator>
+                    <TimelineDot />
+                    <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineContent>
+                  <div className={classes.subtitle}>Fronted Developer</div>
+                      <div className={classes.text}>
+                      <div > <CircleIcon className={classes.pointerEvents}/>Receiving tasks and projects for front-end development</div>
+                      <div > <CircleIcon className={classes.pointerEvents}/>Implementing and completing front-end development projects.</div>
+                      </div>
+                  </TimelineContent>
+                </TimelineItem>
+                <br></br>
+                <a href='https://www.teleclal.co.il/' target="_blank" style={{fontSize:22,justifyContent: 'center',width:'100%'}} className={classes.subtitle}>Teleclal Business Group</a>   
+                <TimelineItem>
+                  <TimelineOppositeContent color="textSecondary">
+                      <div className={classes.date} style={{color:'#1c1c1c' ,fontWeight:'600'}}>
+                            present
+                      </div>
+                  </TimelineOppositeContent>
+                  <TimelineSeparator>
+                    <TimelineDot />
+                    <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineContent>
+                  <div className={classes.subtitle}>IT</div>
+                      <div className={classes.text}>
+                      <div > <CircleIcon className={classes.pointerEvents}/> Managing and maintaining the company's technology equipment, servers, and networks</div>
+                      <div > <CircleIcon className={classes.pointerEvents}/> Providing technical support and assistance to company employees in the areas of computers and telephony</div>
+                      <div > <CircleIcon className={classes.pointerEvents}/> Setting up and configuring call centers for the company</div>
+                      </div>
+                  </TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                  <TimelineOppositeContent color="textSecondary">
+                      <div className={classes.date}>
+                        2021-2022
+                      </div>
+                  </TimelineOppositeContent>
+                  <TimelineSeparator>
+                    <TimelineDot />
+                    <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineContent>
+                      <div className={classes.subtitle}>PROJECT MANEGER - TECHNOLOGY</div>
+                      <div className={classes.text}>
+                        <div > <CircleIcon className={classes.pointerEvents}/> Building custom CRM for clients with Vtiger 7 system, and making tutorials</div>
+                        <div > <CircleIcon className={classes.pointerEvents}/> Establishment of call center in the field of telephony with FreePBX - Asterisk system</div>
+                        <div > <CircleIcon className={classes.pointerEvents}/> Managing projects with short-term deadlines and high pressure.</div>
+                        <div > <CircleIcon className={classes.pointerEvents}/> Dynamic work with the company's executives, keeping close connections with customers.</div>
+                        <div > <CircleIcon className={classes.pointerEvents}/> Organizational experience, working with multiple teams and divisions</div>
+                      </div>
+                  </TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                  <TimelineOppositeContent color="textSecondary">
+                      <div className={classes.date}>
+                            2020-2021
+                      </div>
+                  </TimelineOppositeContent>
+                  <TimelineSeparator>
+                    <TimelineDot />
+                    <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineContent>
+                  <div className={classes.subtitle}>Unlimited - salesman</div>
+                      <div className={classes.text}>
+                        <div > <CircleIcon className={classes.pointerEvents}/> Providing service to the company's customers and meeting customer satisfaction goals</div>
+                        <div > <CircleIcon className={classes.pointerEvents}/> Handling and dealing with competing proposals</div>
+                        <div > <CircleIcon className={classes.pointerEvents}/> Characterization of the Salesforce system according to the needs of the company</div>
+                      </div>
+                  </TimelineContent>
+                </TimelineItem>
+              </Timeline>
       </>) :null
     }
   </div>
@@ -173,4 +196,8 @@ const MyTimeline = ({props}) => {
 }
 
 export default MyTimeline
+
+
+
+
 
